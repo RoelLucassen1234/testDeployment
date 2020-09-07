@@ -1,0 +1,38 @@
+.content{
+    margin: 20px 500px 0px 500px;
+}
+
+
+
+.kopje{
+    margin-top:12.0pt;
+    margin-right:0cm;
+    margin-bottom:0cm;
+    margin-left:0cm;
+    line-height:107%;
+    font-size:21px;
+    font-family:"Calibri Light",
+    sans-serif;
+    color:#2F5496;
+    font-weight:normal;
+
+}
+
+.bigger_lines{
+    width: 432.05pt;border-top: none;border-left: none;border-bottom: 1pt solid ;border-right: 1pt solid ;padding: 0cm 5.4pt;vertical-align: top;
+}
+.smaller_lines{
+    width: 21.05pt;border-right: 1pt solid ;border-bottom: 1pt solid ;border-left: 1pt solid ;border-image: initial;border-top: none;padding: 0cm 5.4pt;vertical-align: top;
+}
+.lines{
+    width: 432.05pt;border-top: 1pt solid ;border-right: 1pt solid ;border-bottom: 1pt solid ;border-image: initial;border-left: none;padding: 0cm 5.4pt;vertical-align: top;
+}
+.goals{
+    margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:0cm;line-height:normal;font-size:15px;font-family:"Calibri",sans-serif;
+}
+.tdclass{
+    width: 21.05pt;border: 1pt solid ;padding: 0cm 5.4pt;vertical-align: top;
+}
+.tekst{
+    margin-top:0cm;margin-right:0cm;margin-bottom:8.0pt;margin-left:0cm;line-height:107%;font-size:15px;font-family:"Calibri",sans-serif;
+}
