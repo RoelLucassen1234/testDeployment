@@ -1,0 +1,298 @@
+<div class="content">
+<h1>Inleiding </h1>
+<p>In dit document zullen de volgende onderwerpen worden besproken over de applicatie: 
+    •	Generale beschrijving met architectuur en user groups
+    •	Security requirements, data assets , CIAP 
+    </p>
+
+<h1>Wat is de applicatie</h1>
+<p>De applicatie is een reader website applicatie waarin mensen hun verhalen kunnen plaatsen. Deze verhalen kunnen persoonlijk zijn tot fictie met een daarbij horende comment sectie waarin mensen hun mening kunnen geven en discussies kunnen houden. </p>
+<h1>Wat is het doel van de applicatie</h1>
+<p>Het doel is om een veilige applicatie te maken die aan de beveiliging voldoet en daarnaast een openbare omgeving geeft om je mening etc te geven. Ook zal deze applicatie worden gebruikt voor red en blue teamers om hun vaardigheden te testen. </p>
+<h1>User groups</h1>
+<p>Hieronder zullen alle user groups staan. Het is mogelijk dat deze over tijd veranderen.</p>
+<table>
+    <tr>
+        <th>Usergroups</th>
+        <th>Red Teamers</th>
+        <th>Blue Teamers</th>
+        <th>Lezers</th>
+        <th>Schrijvers</th>
+        <th>Administratie</th>
+      </tr>
+      <tr>
+        <td>beschrijving</td>
+        <td>Hackers die de applicatie zullen testen.</td>
+        <td>Beveiligers die de applicatie zullen beschermen tijdens een hacking aanval</td>
+        <td>Gebruikers die de site gebruiken om verhalen te lezen en om berichten te plaatsen.</td>
+        <td>Gebruikers die de site gebruiken om hun verhalen te plaatsen.</td>
+        <td>Administratie zorgt ervoor dat onder andere racistische of seksuele verhalen van de site worden gehaald.</td>
+      </tr>
+</table>
+
+<h1>Architectuur</h1>
+<p>In dit kopje zal alle architectuur staan van het project. Het is mogelijk dat sommige architectuur mist omdat het nog niet is toegevoegd of gemaakt.</p>
+<h1>Systeem Context</h1>
+<img style="width: 40pc;" class="project_icon" src="../../../assets/img/simple_architectuur.PNG" alt="simpele architectuur">
+<p>Aangezien de applicatie een website is heeft een gebruiker alleen toegang tot de front-end. Vanuit de front-end kan hij bepaalde requests maken naar de backend/API. De API zal verifiëren dat de gebruiker de juiste privileges heeft en zal gebasseerd hierop een request maken naar een kleine database. Hiernaast zal hij alle transacties loggen. De database zal opnieuw verifiëren of de API request de juiste privileges heeft en zal gebasseerd hierop de request uitvoeren of niet.</p>
+
+<h1>Netwerk architectuur</h1>
+<img  class="project_icon" src="../../../assets/img/netwerk.PNG" alt="simpele architectuur"> 
+<p>Mijn netwerk architectuur zal er als volgt:
+    - Firewall 1.0. Deze firewall restrict alle inbound en outbound communicatie. Een voorbeeld zou zijn om alleen port 80 en 443 verkeer open te zetten voor http en https servers.
+    - IDS. Dit is een intrusion detection server die alle kritische subnets bekijkt en de LAN. Dit helpt met het vinden van een afwijkende netwerk process dat mogelijk een aanval kan zijn.
+    -  Webserver. Hierbinnen wordt de website gehost.
+    - Application Server. Hier worden alle transacties van de webserver gelogged en geverifierd. Als de requests zijn goedgekeurd kan het zijn dat de application server een request naar de database stuurt
+    - Firewall 2.0. Sluit alles behalve de ipadressen waar servers op staan gehost zoals de database.
+    - Database. De database zal requests van de Applicatie Server binnenkrijgen, verifiëren en dan data terugsturen naar de application server
+    </p>
+
+    <h1>Security Requirement</h1>
+<p>De security is belangrijk in deze applicatie omdat er gebruik wordt gemaakt van emails en wachtwoorden. Dit is gevoelige informatie dat niet iedereen zomaar mag weten. Daarnaast is security ook belangrijk om ervoor te zorgen dat vreemde niet zomaar verhalen van andere kunnen aanpassen en die schrijvers een slechte reputatie geven. Dezelfde regel geld ook voor de reacties/comments van andere en/of het verwijderen ervan.
+    Hetgene waar eerst op wordt gefocused is het authorizeren en authorisiatie. Een lezer heeft minder rechten dan een schrijver terwijl een schrijver minder rechten heeft dan een administrator. Daarnaast zal ook moeten worden gekeken hoe iemand zichzelf kan authentiseren. Dit kan doormiddel van two-factor authenticatie maar daar moet nog naar worden gekeken.
+    Het tweede deel waar de applicatie zich op zal focussen is het tegengaan van XSS en brute-forcen van accounts. Het brute-forcen van accounts zal moeten worden gedaan door een time-out of captcha. Voor het probleem van de XSS zal nog onderzoek naar moeten worden gedaan.
+    </p>
+
+    <h1>Data list</h1>
+    
+<table >
+        <tr>
+            <td >
+                <p >Data asset</p>
+            </td>
+            <td >
+                <p >Visitor</p>
+            </td>
+            <td >
+                <p >Writer</p>
+            </td>
+            <td>
+                <p >Admin</p>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <p >Reading</p>
+            </td>
+            <td >
+                <p >R</p>
+            </td>
+            <td >
+                <p >R</p>
+            </td>
+            <td >
+                <p >R</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p >Posting</p>
+            </td>
+            <td >
+                <p >-</p>
+            </td>
+            <td >
+                <p >C</p>
+            </td>
+            <td >
+                <p >-</p>
+            </td>
+        </tr>
+        <tr>
+            <td >
+                <p >Log in</p>
+            </td>
+            <td >
+                <p >-</p>
+            </td>
+            <td >
+                <p >R</p>
+            </td>
+            <td >
+                <p >R</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <p >Story</p>
+            </td>
+            <td >
+                <p >CR</p>
+            </td>
+            <td >
+                <p >CRU</p>
+            </td>
+            <td >
+                <p >CRUD</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p >Email</p>
+            </td>
+            <td >
+                <p >C</p>
+            </td>
+            <td >
+                <p >CU</p>
+            </td>
+            <td >
+                <p >RUD</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p >Password</p>
+            </td>
+            <td >
+                <p >C</p>
+            </td>
+            <td >
+                <p >U</p>
+            </td>
+            <td >
+                <p >RUD</p>
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <p >Username</p>
+            </td>
+            <td >
+                <p >C</p>
+            </td>
+            <td >
+                <p >RU</p>
+            </td>
+            <td >
+                <p >RUD</p>
+            </td>
+        </tr>
+</table>
+<br>
+
+<h1>CIA and privacy </h1>
+<table>
+    <tr>
+        <td >
+            <p >CIAP</p>
+        </td>
+        <td >
+            <p >C</p>
+        </td>
+        <td >
+            <p >I</p>
+        </td>
+        <td >
+            <p >A</p>
+        </td>
+        <td >
+            <p >P</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Account info</p>
+        </td>
+        <td >
+            <p >Condifdential</p>
+        </td>
+        <td >
+            <p >High</p>
+        </td>
+        <td >
+            <p >Important</p>
+        </td>
+        <td >
+            <p >Personal</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Story information</p>
+        </td>
+        <td >
+            <p >Public</p>
+        </td>
+        <td >
+            <p >Medium</p>
+        </td>
+        <td >
+            <p >Required</p>
+        </td>
+        <td >
+            <p >Public</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Comment info</p>
+        </td>
+        <td >
+            <p >Public</p>
+        </td>
+        <td >
+            <p >Medium</p>
+        </td>
+        <td >
+            <p >Not necessary</p>
+        </td>
+        <td >
+            <p >Public</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Authentication</p>
+        </td>
+        <td >
+            <p >Public</p>
+        </td>
+        <td >
+            <p >Guaranteed</p>
+        </td>
+        <td >
+            <p >Essential</p>
+        </td>
+        <td >
+            <p >Personal</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Story creation</p>
+        </td>
+        <td >
+            <p >Confidential</p>
+        </td>
+        <td >
+            <p >High</p>
+        </td>
+        <td >
+            <p >Important</p>
+        </td>
+        <td >
+            <p >Personal</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Story deletion</p>
+        </td>
+        <td >
+            <p >Confidential</p>
+        </td>
+        <td >
+            <p >Guaranteed</p>
+        </td>
+        <td >
+            <p >Important</p>
+        </td>
+        <td >
+            <p >Personal</p>
+        </td>
+    </tr>
+
+</table>
+
+</div>

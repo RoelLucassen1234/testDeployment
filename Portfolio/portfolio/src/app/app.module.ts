@@ -7,6 +7,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { LeerplanningComponent } from './leerplanning/leerplanning.component';
 import { SecurityportfolioComponent } from './securityportfolio/securityportfolio.component';
 import { SEworkshopComponent } from './seworkshop/seworkshop.component';
+import { ApplicatieAnalyseComponent } from './analyse_security_engineer/applicatie-analyse/applicatie-analyse.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SEworkshopComponent } from './seworkshop/seworkshop.component';
     MainPageComponent,
     LeerplanningComponent,
     SecurityportfolioComponent,
-    SEworkshopComponent
+    SEworkshopComponent,
+    ApplicatieAnalyseComponent
   ],
   imports: [
     BrowserModule,
