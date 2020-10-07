@@ -26,16 +26,6 @@
 
 }
 
-.content h2 {
-    margin: 12.0pt 0 0;
-    line-height: 107%;
-    font-size: 1em;
-    font-family: K2D, Halvetica, Arial, sans-serif;
-    color: #b3b3b3;
-    font-weight: 300;
-
-}
-
 @media screen and (max-width:789px) {
     .content {
         margin: 0 0;

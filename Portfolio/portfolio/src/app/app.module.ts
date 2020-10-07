@@ -7,7 +7,9 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { LeerplanningComponent } from './leerplanning/leerplanning.component';
 import { SecurityportfolioComponent } from './securityportfolio/securityportfolio.component';
 import { SEworkshopComponent } from './seworkshop/seworkshop.component';
-import { ApplicatieAnalyseComponent } from './analyse_security_engineer/applicatie-analyse/applicatie-analyse.component';
+import { XssAnalyseComponent } from './analyse_security_engineer/xss/xss-analyse.component';
+import { ApplicatieAnalyseComponent } from './analyse_security_engineer/applicatie-analyse/analyse_aplicatie/applicatie-analyse.component';
+import { LoggingComponent } from './analyse_security_engineer/logging/logging.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ApplicatieAnalyseComponent } from './analyse_security_engineer/applicat
     LeerplanningComponent,
     SecurityportfolioComponent,
     SEworkshopComponent,
-    ApplicatieAnalyseComponent
+    ApplicatieAnalyseComponent,
+    XssAnalyseComponent,
+    LoggingComponent
   ],
   imports: [
     BrowserModule,

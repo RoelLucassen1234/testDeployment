@@ -1,0 +1,44 @@
+
+<div class="content">
+<h1>Inleiding </h1>
+<p>In dit document zal worden beschreven wat ik allemaal heb gebruikt om XSS tegen te gaan.</p>
+
+<h1>Input Validation</h1>
+<p>Input validation wordt uitgevoerd om ervoor te zorgen dat alleen correcte  gegevens in een informatiesysteem binnenkomen, waardoor wordt voorkomen dat foute/illegale gegevens in de database blijven staan en storingen kan veroorzaken. Inputvalidatie dient zo vroeg mogelijk in de datastroom te gebeuren.
+    Input validatie kan op Syntactical en Semantic level uitgevoerd worden.
+    Syntactic validatie dwingt dat de correcte syntax in een veld wordt gebruikt.
+    Semantic validatie dwingt af dat hoe correct een veld is (bijvoorbeeld start datum is voor de einddatum)
+    </p>
+
+    <h1>Implementeren van input validatie</h1>
+    <p>Input validatie kan op meerdere manieren worden geimplimenteerd om je systeem te beschermen. Hier zijn een paar voorbeelden:     </p>
+        <ul>
+            <li>Data type validators zijn mogelijk in web frameworks</li>
+            <li>Validatie tegen JSON en XML input.</li>
+            <li>Data type conversie. Bijvoorbeeld integer.parseInt() of Double.ToString().</li>
+            <li>Minimum en maximum waardes voor velden zoals datums of lengtes van strings.</li>
+            <li>Array van toegestaande waardes (bijvoorbeeld dagen van een week)</li>
+            <li>Regular expressions voor beschermen of het afdwingen van bepaalde input.</li>
+        </ul>
+
+    
+
+    <h1>Hoe wordt input validatie in mijn systeem geïmplementeerd</h1>
+    <p> <b> Minimum en maximum waardes </b> </p>
+    <p>
+        Binnen mijn system zijn er een paar velden waarin de minimum en maximum waardes worden afgedwongen. Bij het registreren van een wachtwoord wordt er verwacht dat het wachtwoord minimaal 7  en maximaal 50 karakters lang zijn.
+        In verband met het maken van een gebruikersnaam wordt er verwacht dat een gebruikersnaam minimaal 5 en maximaal 20 karakters heeft.
+        Deze waardes worden afgedwongen doordat Angular een FormsModule heeft om met input validatie te helpen. Je kan doormiddel van de FormsModule al bestaande input validaties maken maar het is ook mogelijk om je eigen input validatie te maken mocht dit nodig zijn. 
+        
+        
+    </p>
+    <p>  
+       <b> Regular Expression </b> </p>
+       <p>
+        Tijdens het inloggen is het niet toegestaan om met vreemde karakters te werken (e.g ‘ , @,#,$,^; : etc) om XSS tegen te gaan. Dezelfde principes gelden ook voor het registreren van een account. Dit wordt gedaan doormiddel van regular expressions.
+        Ook wordt het gebruikt om een gebruiker te dwingen een wachtwoord te maken dat minstens 7 karakters lang is, een hoofdletter , een kleine letter en een cijfer heeft waardoor de kwaliteit van wachtwoorden automatisch worden verhoogd. 
+        Een regular expression afgekort tot regex is een manier om patronen te beschrijven waardoor een computer softwarematig tekst kan herkennen. Er bestaat hiervoor een formele syntaxis, die deels is gestandaardiseerd. 
+        Aangezien angular uitzichzelf al een module heeft om input te valideren is het mogelijk om je eigen validatie te maken waardoor het mogelijk is om regular expressions toe te passen in de validatie waardoor het niet mogelijk wordt om vreemde karakters toe te voegen. 
+       
+        </p>
+    </div>

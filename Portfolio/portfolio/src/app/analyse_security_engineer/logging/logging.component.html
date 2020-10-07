@@ -1,0 +1,43 @@
+<div class="content"> 
+<h1>Inleiding</h1>
+<p>Er zijn meerdere manieren om logging toe te passen in het systeem. Ik zal hier een paar voorbeelden noemen en beschrijven hoe ze werken en waarom ze wel of niet gekozen zijn.</p>
+
+<h1>Opties voor logging</h1>
+<p>Er zijn meerdere manieren om logging toe te passen in het systeem. Ik zal hier een paar voorbeelden noemen en beschrijven hoe ze werken en waarom ze wel of niet gekozen zijn.</p>
+<h2>java.util.logging.Logger class</h2>
+<p>De eerste optie is het gebruik maken van java’s standaard log systeem. Aangezien het logsysteem centraal beheerd wordt is dit een makkelijke manier van toepassen. Deze manier van logging maakt gebruik van de java.util.logging.Logger class.
+</p>
+<p>  De Logger class heeft meerdere log levels om aan te geven hoe gevaarlijk/problematiek de log is. Hiermee wordt het mogelijk om te kijken hoe gevaarlijk een fout is.</p>
+<img src="../../../assets//img/log_level.png">
+<p>SEVERE treedt op als er iets vreselijks is gebeurd en de toepassing niet verder kan. Database niet beschikbaar, onvoldoende geheugen etc. </p>
+<p>WARNING kan optreden wanneer de gebruiker verkeerde invoer of inloggegevens heeft opgegeven.  </p>
+<p>INFO is bedoeld voor beheerders of gevorderde gebruikers. Het geeft meestal de acties aan die hebben geleid tot een statuswijziging voor de applicatie.  </p>
+<p>CONFIG kan zijn zoals op welke CPU de toepassing draait, hoeveel schijf- en geheugenruimte is.</p>
+<p>Fine Finer en Finest bieden traceringsinformatie. Wanneer wat er gebeurt / is gebeurd in onze applicatie. </p>
+<p>FINE geeft de belangrijkste berichten hiervan weer.</p>
+<p>FINER voert een gedetailleerd traceringsbericht uit en kan logboekoproepen bevatten met betrekking tot het invoeren, verlaten en gooien van excepties.</p>
+<p>FINEST biedt een zeer gedetailleerd traceringsbericht. </p>
+<p><b>Praktisch voorbeeld:</b></p>
+<img src="../../../assets/img/praktisch_voorbeeld.PNG">
+<p>Output:</p>
+<img src="../../../assets/img/output.png">
+
+<h2>spring-jcl</h2>
+<p>Spring-jcl is een package dat automatisch in Springboot starter Web zit. Tijdens het gebruik van Spring-jcl kan hij met een LoggerFactory een Logger-object maken. De LoggerFactory kan gemakkelijk zeggen waar een log moet worden toegevoegd en wat voor soort log niveau het moet zijn (logniveaus: TRACE, DEBUG, INFO, WARN en ERROR).</p>
+<p>Wanneer een thread deze code vindt, zal deze standaard een aangepast bericht in de console plaatsen. Deze instellingen kunnen worden gewijzigd om deze output bijvoorbeeld ook in rollende bestanden te loggen met behulp van Logback, dat ook in het pakket zit. Deze bestanden kunnen worden gescheiden tussen het soort logboekregistratieniveau dat u wilt, de bestandsgrootte en de datum.</p>
+<p>Bealdung (2020, https://www.baeldung.com/spring-boot-logging) geeft een verhaal over hoe loggen in Spring Boot moet gebeuren en Brandon Jones(2018, https://www.youtube.com/watch?v=xJa-UsP9slQ) geeft hetzelfde verhaal. </p>
+<p> <b>praktisch voorbeeld:</b>  </p>
+<img src="../../../assets/img/praktisch_voorbeeld2.PNG">
+<p>Als je zou gaan kijken naar de loggings als je naar de controller gaat zie je het volgende:</p> 
+<img src="../../../assets/img/output_jcl.png">
+<p>Het standaard logniveau van de Logger is vooraf ingesteld op INFO, wat betekent dat TRACE- en DEBUG-berichten niet zichtbaar zijn. </p>
+<p>Om ze te activeren zonder de configuratie te wijzigen, kunnen we de –debug of –trace argumenten op de command doorgeven: </p>
+<p>-	java -jar target/spring-boot-logging-0.0.1-SNAPSHOT.jar –trace </p>
+<p> <b>logback</b> </p>
+<p>Het ding van spring-jcl is dat je een logback kan toevoegen voor extra configuratie. Hierdoor worden de gerangschikt op kleur, worden minder belangrijkere logs niet weergeven tenzij je erom vraagt en informatie dat meerdere keren voorkomt wordt komt maar een keer voor.</p>
+<p>Ook wordt er een .log file aangemaakt waar automatische alle logs worden opgeslagen. Aangezien deze file snel heel groot wordt moeten we ervoor zorgen dat omgevingsvariable niet worden opgeslagen aangezien ze al in de logback onderaan staan.</p>
+<h1>Gekozen optie</h1>
+<p>Ik heb in dit geval gekozen voor spring-jcl. De reden hiervoor is dat ondanks lava.logging meer loglevels heeft, spring-jcl niet alleen gemaakt is voor een spring applicatie zoals die van mij, het ook doormiddel van configuraties aanzienlijker beter zichtbaar maakt. Ook kan spring-jcl in tegenstelling tot java.logging een logback maken die alle logs permanent en goed opslaat. </p>
+
+
+</div>
