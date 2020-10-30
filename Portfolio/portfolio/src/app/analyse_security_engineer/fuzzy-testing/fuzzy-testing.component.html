@@ -1,0 +1,57 @@
+<div class="content">
+    <h2>Inleiding</h2>
+    <p>Dit document beschrijft wat fuzz testing is, waarom het wordt gebruikt en hoe je het kan toepassen. Er zullen ook een paar voorbeelden worden gegeven.</p>
+
+    <h2>Wat is Fuzz testing</h2>
+    <p>Fuzz testing beschrijft systeemtestprocessen die een gerandomiseerde benadering omvatten. IT-professionals gebruiken de term vaak om te praten om applicaties te stresstest door willekeurige gegevens in te voeren om eventuele fouten of hang-ups op te sporen. Het idee achter fuzz-testen is dat softwaretoepassingen en -systemen veel verschillende bugs of glitches kunnen hebben met betrekking tot gegevensinvoer en dit zou niet moeten gebeuren</p>
+    <p>Fuzz-testen kunnen bijvoorbeeld de invoer van verschillende soorten integers, character strings, floats en andere variabelen omvatten die, als ze niet correct worden ingevoerd, ertoe kunnen leiden dat de applicatie vastloopt of crasht. </p>
+    <p>Een voorbeeld is een integer-veld dat bedoeld is om een paar specifieke getallen te gebruiken zoals een tot en met vijf, maar waar een gebruiker elk getal kan invoeren doordat ze het niet hebben gelimiteerd. Het invoeren van een hoog getal kan dan een fout of crash veroorzaken. Bij fuzz-testen experimenteren ontwikkelaars met het invoeren van veel verschillende soorten willekeurige reacties, en documenteren ze vervolgens eventuele bugs die optreden. In sommige gevallen kunnen ontwikkelaars een tool genaamd fuzzer gebruiken om willekeurige gegevens te injecteren.</p>
+    
+
+    <h2>Waarom zou je fuzz testing gebruiken</h2>
+    <ul>
+        <li>Vaak vindt Fuzzy-testen de grote beveiligingsfouten of defecten. </li>
+        <li>Fuzz-testen geven een effectiever resultaat bij gebruik met Black Box Testing, Beta Testing en andere methoden voor foutopsporing. </li>
+        <li>Vaak vindt Fuzzy-testen de grote beveiligingsfouten of defecten. </li>
+        <li>Fuzz-testen is een van de black box-testtechnieken. Fuzzing is een van de meest gebruikte methoden die hackers gebruiken om de kwetsbaarheid van het systeem te vinden.</li>
+    </ul>
+    
+
+    <h2>Hoe fuzz test je</h2>
+    <ol>
+        <li>Identify the target system</li>
+        <li>Identify inputs</li>
+        <li>Generate Fuzzed data</li>
+        <li>Execute the test using fuzzy data</li>
+        <li>Monitor system behavior</li>
+        <li>Log defects</li>
+    </ol>
+    
+
+    <p>Een paar voorbeelden van Fuzzers:</p>
+    
+    
+    <p><b>Mutation-Based</b></p>
+    <p>Fuzzers veranderen bestaande datamonsters om nieuwe testdata te creëren. Dit is de zeer eenvoudige en ongecompliceerde aanpak, dit begint met geldige voorbeelden van protocol en blijft elke byte of bestand verminken.</p>
+    <p><b>Generation-Based Fuzzers</b></p>
+    <p>Definieert nieuwe data op basis van de input van het model. Het begint vanaf het begin invoer te genereren op basis van de specificatie.</p>
+    <p><b>PROTOCOL-GEBASEERDE-fuzzer</b></p>
+    <p>De meest succesvolle fuzzer is om gedetailleerde kennis te hebben van het protocolformaat dat wordt getest. Het omvat het schrijven van een reeks van de specificatie in de tool en vervolgens met behulp van een modelgebaseerde testgeneratietechniek de specificatie doorlopen en onregelmatigheden toevoegen in de gegevensinhoud. Dit staat ook bekend als syntaxis testen, grammatica testen, robuustheid testen</p>
+
+
+<h2>Fuzz test tools</h2>
+<p>Tools die worden gebruikt bij webbeveiliging kunnen op grote schaal worden gebruikt bij fuzz-tests zoals Burp Suite, Peach Fuzzer, enz.</p>
+
+<p><b>Perzik Fuzzer</b></p>
+<p>Peach Fuzzer biedt meer robuuste en beveiligingsdekking dan een scanner. Andere testtools kunnen alleen naar bekende threads zoeken, terwijl Peach Fuzzer gebruikers in staat stelt om bekende en onbekende threads te vinden.</p>
+<p><b>Spike-proxy</b></p>
+<p>Het is een professionele tool die zoekt naar kwetsbaarheden op applicatieniveau in webapplicaties. SPIKE Proxy behandelt de basisprincipes, zoals SQL-injectie en cross-site-scripting, maar het is een volledig open Python-infrastructuur. SPIKE Proxy is beschikbaar voor Linux en Windows.</p>
+<p><b>Webscarab</b></p>
+<p>Webscarab is in Java geschreven en dus overdraagbaar naar veel platforms. Voor het analyseren van applicaties wordt een Webscarab-framework gebruikt dat communiceert via HTTP- en HTTPS-protocollen.</p>
+<p>Voorbeeld: Webscarab werkt als een onderscheppende proxy, het stelt de operator in staat om door de browser aangemaakte verzoeken te bekijken en te wijzigen voordat ze door de server worden ontvangen. En laat toe om de reacties die door de server zijn gegenereerd te bekijken en bij te werken voordat ze door de browser zijn ontvangen. Op deze manier, als de web-scarabee een probleem vindt, wordt de lijst met de gemelde problemen gemaakt.</p>
+<p><b>OWASP WSFuzzer</b></p>
+<p>WSFuzzer is een GPL-programma dat is geschreven in Python. GPL heeft een programma momenteel gericht op webservices. In de huidige versie van OWASPWSFuzzer zijn op HTTP gebaseerde SOAP-services het belangrijkste doelwit. </p>
+
+
+
+</div>

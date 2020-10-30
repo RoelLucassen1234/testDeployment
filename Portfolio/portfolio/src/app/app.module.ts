@@ -9,7 +9,10 @@ import { SecurityportfolioComponent } from './securityportfolio/securityportfoli
 import { SEworkshopComponent } from './seworkshop/seworkshop.component';
 import { XssAnalyseComponent } from './analyse_security_engineer/xss/xss-analyse.component';
 import { ApplicatieAnalyseComponent } from './analyse_security_engineer/applicatie-analyse/analyse_aplicatie/applicatie-analyse.component';
-import { LoggingComponent } from './analyse_security_engineer/logging/logging.component'
+import { LoggingComponent } from './analyse_security_engineer/logging/logging.component';
+import { SecurityPrinciplesComponent } from './analyse_security_engineer/applicatie-analyse/security-principles/security-principles.component';
+import { FuzzyTestingComponent } from './analyse_security_engineer/fuzzy-testing/fuzzy-testing.component';
+import { SecurityJobsComponent } from './analyse_security_engineer/security-jobs/security-jobs.component'
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { LoggingComponent } from './analyse_security_engineer/logging/logging.co
     SEworkshopComponent,
     ApplicatieAnalyseComponent,
     XssAnalyseComponent,
-    LoggingComponent
+    LoggingComponent,
+    SecurityPrinciplesComponent,
+    FuzzyTestingComponent,
+    SecurityJobsComponent
   ],
   imports: [
     BrowserModule,
