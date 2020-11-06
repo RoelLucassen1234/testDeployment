@@ -12,7 +12,13 @@ import { ApplicatieAnalyseComponent } from './analyse_security_engineer/applicat
 import { LoggingComponent } from './analyse_security_engineer/logging/logging.component';
 import { SecurityPrinciplesComponent } from './analyse_security_engineer/applicatie-analyse/security-principles/security-principles.component';
 import { FuzzyTestingComponent } from './analyse_security_engineer/fuzzy-testing/fuzzy-testing.component';
-import { SecurityJobsComponent } from './analyse_security_engineer/security-jobs/security-jobs.component'
+import { SecurityJobsComponent } from './analyse_security_engineer/security-jobs/security-jobs.component';
+import { GroupprojectComponent } from './groupproject/groupproject.component';
+import { ProjectBedreigingComponent } from './project_components/project_analyse/project-bedreiging/project-bedreiging.component';
+import { ProjectEthischComponent } from './project_components/project_analyse/project-ethisch/project-ethisch.component';
+import { ProjectResearchDocumentsComponent } from './project_components/project_research/project-research-documents/project-research-documents.component';
+import { ResearchBsnComponent } from './project_components/project_research/research-bsn/research-bsn.component';
+import { RedvsblueComponent } from './analyse_security_engineer/redvsblue/redvsblue.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +32,13 @@ import { SecurityJobsComponent } from './analyse_security_engineer/security-jobs
     LoggingComponent,
     SecurityPrinciplesComponent,
     FuzzyTestingComponent,
-    SecurityJobsComponent
+    SecurityJobsComponent,
+    GroupprojectComponent,
+    ProjectBedreigingComponent,
+    ProjectEthischComponent,
+    ProjectResearchDocumentsComponent,
+    ResearchBsnComponent,
+    RedvsblueComponent
   ],
   imports: [
     BrowserModule,

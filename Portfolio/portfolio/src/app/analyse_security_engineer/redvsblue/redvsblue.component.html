@@ -1,0 +1,15 @@
+<div class="content"> 
+<h2>Applicatie</h2>
+<p>De applicatie had de volgende functies tijdens het eerste evenement: Een gebruiker kon registreren met een email, gebruikersnaam en wachtwoord, een gebruiker kon inloggen als hij een wachtwoord had. Als je ingelogd was kon je als je een admin was alle gebruikers bekijken en verwijderen. De autorizatie werd gedaan doormiddel van JWT tokens. Deze tokens waren gesigned met een RSA 2048 sleutel die random werd gegenereerd. </p>
+<p>Voor het deployen maak ik gebruik van ubuntu 2020 server. Op deze server heb ik docker geinstalleerw. Ik bouw hiermee mijn images en die bouw ik via docker-compose. Ik heb ervoor gezorgd dat deze images via github worden gepulled waardoor ik al mijn aanpassingen binnen een minuut kan opzetten</p>
+<h2>Problemen voor het evenement</h2>
+<p>Geen goede database beveiliging</p>
+<p>Geen ssl certificaat</p>
+<p>Geen DOS verdediging</p>
+<h2>Problemen gevonden door red team</h2>
+<p>De red teamers hebben geen problemen gevonden met mijn applicatie op het moment. Redenering ervoor was dat er nog niet genoeg op stond. Ze hebben echter niet geprobeerd om toegang te krijgen tot mijn database of ik heb er geen logs over gezien</p>
+<h2>Problemen die ik heb gevonden tijdens het evenement</h2>
+<p>Ik heb twee problemen gevonden met de logging. Het eerste probleem was dat ik onnodige informatie (de jwt token) liet zien waardoor ik moeite kreeg met het bekijken van relevante logs. De tweede fout was dat sommige logs niet precies genoeg was voor mijn gevoel en wat ik wat preciezer wil maken</p>
+<h2>Conclusie</h2>
+<p>Voor het eerste evenement vind ik dat ik een goede applicatie heb geleverd. Er waren mogelijk iets te weinig features voor de red teamers maar voor de eerste keer vond ik het voldoende. Voor het volgende evenement zou het mogelijk moeten worden om een profiel aan te maken met foto's. hopelijk geeft dit de mogelijkheid voor red teamers om vulnerabilities te vinden.</p>
+</div>
