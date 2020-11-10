@@ -17,6 +17,10 @@ import { ProjectEthischComponent } from './project_components/project_analyse/pr
 import { ProjectResearchDocumentsComponent } from './project_components/project_research/project-research-documents/project-research-documents.component';
 import { ResearchBsnComponent } from './project_components/project_research/research-bsn/research-bsn.component';
 import { RedvsblueComponent } from './analyse_security_engineer/redvsblue/redvsblue.component';
+import { PersonalresearchComponent } from './personalresearch/personalresearch.component';
+import { PersonalanalyseComponent } from './personalanalyse/personalanalyse.component';
+import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.component';
+import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: '/main', pathMatch: 'full'},
@@ -37,7 +41,11 @@ const routes: Routes = [
   {path: 'groupanalyse', component : ProjectAnalyseDocumentsComponent},
   {path: 'groupresearch', component : ProjectResearchDocumentsComponent},
   {path: 'bsnresearch', component : ResearchBsnComponent},
-  {path: 'redblue1', component : RedvsblueComponent}
+  {path: 'redblue1', component : RedvsblueComponent},
+  {path: 'personalresearch', component : PersonalresearchComponent},
+  {path: 'personalanalyse', component : PersonalanalyseComponent},
+  {path: 'personalleerplanning', component : LeerplanresearchComponent},
+  {path: 'ontwikkeling1', component : Leerontwikkelingpt1Component}
 
   
 ];

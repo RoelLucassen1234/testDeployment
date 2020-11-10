@@ -18,7 +18,11 @@ import { ProjectBedreigingComponent } from './project_components/project_analyse
 import { ProjectEthischComponent } from './project_components/project_analyse/project-ethisch/project-ethisch.component';
 import { ProjectResearchDocumentsComponent } from './project_components/project_research/project-research-documents/project-research-documents.component';
 import { ResearchBsnComponent } from './project_components/project_research/research-bsn/research-bsn.component';
-import { RedvsblueComponent } from './analyse_security_engineer/redvsblue/redvsblue.component'
+import { RedvsblueComponent } from './analyse_security_engineer/redvsblue/redvsblue.component';
+import { PersonalresearchComponent } from './personalresearch/personalresearch.component';
+import { PersonalanalyseComponent } from './personalanalyse/personalanalyse.component';
+import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.component';
+import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +42,11 @@ import { RedvsblueComponent } from './analyse_security_engineer/redvsblue/redvsb
     ProjectEthischComponent,
     ProjectResearchDocumentsComponent,
     ResearchBsnComponent,
-    RedvsblueComponent
+    RedvsblueComponent,
+    PersonalresearchComponent,
+    PersonalanalyseComponent,
+    LeerplanresearchComponent,
+    Leerontwikkelingpt1Component
   ],
   imports: [
     BrowserModule,

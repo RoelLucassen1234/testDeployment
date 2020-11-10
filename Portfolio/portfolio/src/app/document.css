@@ -35,6 +35,15 @@
 
 }
 
+.content p {
+
+    font-size: 1em;
+    font-family: K2D, Halvetica, Arial, sans-serif;
+   
+    font-weight: 300;
+
+}
+
 @media screen and (max-width:789px) {
     .content {
         margin: 0 0;
