@@ -1,6 +1,17 @@
 <div class="content"> 
     <h1>Inleiding</h1>
-    <p>In dit document wordt de CIA uitgelegd met voorbeelden. Hiernaast zullen er ook een paar Security Best Practices worden beschreven.</p>
+    <p>In dit document worden de security principles en de CIA uitgelegd met voorbeelden. Hiernaast zullen er ook een paar Security Best Practices worden beschreven.</p>
+
+<h2> <b>Step by step approach </b></h2>
+<p>Stap 1. Analyseer je project voordat je begint. Ga kijken wie jou applicatie zou willen aanvallen en waarom. Kijk daarna hoe je dit kan gaan stoppen. Ook moet je gaan kijken naar wat je kan gaan beveiligen. Schrijf dit op in een document zodat je dit makkelijk terug kan zien. Andere belangrijke analyses zijn:CIA
+   , Risk analysis,
+    Privacy Impact assessment (PIA),
+    Misuse case diagram, Threat analysis en Security architecture.
+    </p>
+<p>Stap 2. Documenteer. Documenteer je systeem architectuur en geef beredenering waarom je het zo hebt gedaan. Dit helpt voor later als je hulp nodig hebt of als je het even kwijt bent. Het tweede gedeelte is het documenteren van security mechanismes die je gaat toepassen.</p>
+<p>Stap 3. Begin met het implementeren van je opdracht. Daarna begin je met het testen van je applicatie. Je kan ook eerst testen gaan schrijven. Dit heet TTD Test Driven Development</p>
+
+
     <h2><b> CIA </b></h2>
     <p>De CIA is een beveiligingsmodel dat gemaakt is om mensen te helpen met het maken van verschillende gedeeltes van IT beveiliging. </p>
     <P>De CIA staat voor de drie principes:</P>
@@ -22,5 +33,35 @@
     <p>Availability zorgt ervoor dat de informatie op elk moment volledig toegankelijk is wanneer geautoriseerde gebruikers deze nodig hebben. Dit betekent dat alle systemen die worden gebruikt om alle gegevens op te slaan, te verwerken en te beveiligen te allen tijde correct moeten werken.
         Wanneer een systeem regelmatig niet functioneert, wordt de beschikbaarheid van informatie aangetast en heeft dit aanzienlijke gevolgen voor gebruikers. Wanneer gegevens niet veilig en gemakkelijk beschikbaar zijn, wordt de informatiebeveiliging bovendien aangetast. Een andere factor die de beschikbaarheid beïnvloedt, is de tijd. Als een computersysteem informatie niet efficiënt kan leveren, komt de beschikbaarheid in gevaar.
         De beschikbaarheid van gegevens moet worden gegarandeerd door opslag, die lokaal of op een externe locatie kan zijn. Informatie moet te allen tijde beschikbaar zijn voor degenen met toestemming.
-        </p>    
+        </p>   
+        
+        <h2><b> Security principles </b></h2>
+        <p><b>Balance Protection With Utility </b></p>
+        <p>In plaats van te proberen bescherming te bieden tegen allerlei soorten bedreigingen, richten de meeste IT-afdelingen zich eerst op het isoleren van de meest vitale systemen en vervolgens op het vinden van aanvaardbare manieren om de rest te beschermen zonder ze onbruikbaar te maken. 
+        Sommige systemen met een lagere prioriteit kunnen in aanmerking komen voor geautomatiseerde analyse, zodat de belangrijkste systemen de focus blijven.</p>
+    
+
+        <p><b>Assign Minimum Privileges </b></p>
+        <p>Om een ​​informatiebeveiligingssysteem te laten werken, moet het weten wie bepaalde dingen mag zien en doen. Iemand in de boekhouding hoeft bijvoorbeeld niet alle namen in een klantendatabase te zien, maar hij moet misschien wel de cijfers uit de verkoop zien komen. Dit betekent dat een systeembeheerder toegang moet toewijzen gebasseerd op een taak.</p>
+<p> Een persoon moet de minimale privileges krijgen die nodig zijn om zijn of haar verantwoordelijkheden uit te voeren. Als iemands verantwoordelijkheden veranderen, veranderen ook de privileges. Het toekennen van minimumrechten verkleint de kans dat een ontwerper de deur uitloopt met alle marketinggegevens.</p>
+        
+<p><b>Identify Your Vulnerabilities And Plan Ahead </b></p>
+        <p> Niet alle middelen zijn even kostbaar. Sommige gegevens zijn belangrijker dan andere, zoals een database met alle boekhoudkundige informatie over  klanten, inclusief hun bank-ID's, burgerservicenummers, adressen of andere persoonlijke informatie.
+            Door vast te stellen welke gegevens kwetsbaarder en / of belangrijker zijn, kun je bepalen welk beveiligingsniveau je moet gebruiken om deze te beschermen.</p>
+
+        <p><b>Use Independent Defenses </b></p>
+        <p>Dit is zowel een militair principe als een IT-beveiligingsprincipe. Het gebruik van een echt goede verdediging, zoals authenticatieprotocollen, is alleen goed totdat iemand deze breekt. Wanneer meerdere onafhankelijke verdedigingslagen worden gebruikt, moet een aanvaller verschillende strategieën gebruiken om er doorheen te komen.
+            De introductie van dit soort meerlaagse complexiteit biedt geen 100 procent bescherming tegen aanvallen, maar verkleint wel de kans op een succesvolle aanval.</p>
+
+        <p><b>Prepare for the Worst, Plan for the Best </b></p>
+        <p>Als al het andere faalt, moet u nog steeds klaar zijn voor het ergste. Door te plannen voor een mislukking, worden de daadwerkelijke gevolgen ervan geminimaliseerd. Door vooral faalveilige systemen te hebben, kan je beveiligingsmaatregelen bewaken en snel reageren op een inbreuk. Bij IT-beveiliging gaat het zowel om het beperken van de schade als gevolg van inbreuken als om het voorkomen en beperken ervan.</p>
+
+        <p><b>Backup, Backup, Backup </b></p>
+        <p>hopelijk wordt een beveiligingssysteem nooit geschonden, maar als er toch een inbreuk op de beveiliging plaatsvindt, moet de gebeurtenis worden geregistreerd. Programmeyrs registreert zelfs vaak zo veel als ze kunnen, zelfs als er geen inbreuk plaatsvindt.
+
+            Soms zijn de oorzaken van inbreuken achteraf niet duidelijk, dus het is belangrijk om gegevens achterwaarts te volgen. Gegevens van inbreuken zullen uiteindelijk helpen om het systeem te verbeteren en toekomstige aanvallen te voorkomen, zelfs als het in eerste instantie niet logisch is.</p>
+
+        <p><b>Run Frequent Tests</b></p>
+        <p>Hackers verbeteren hun vak voortdurend, wat betekent dat informatiebeveiliging moet evolueren om bij te blijven. IT-professionals voeren tests uit, voeren risicobeoordelingen uit, herlezen het noodherstelplan, controleren het bedrijfscontinuïteitsplan in geval van een aanval en doen het dan helemaal opnieuw</p>
+
 </div>
