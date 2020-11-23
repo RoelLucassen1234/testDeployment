@@ -23,7 +23,8 @@ import { PersonalresearchComponent } from './personalresearch/personalresearch.c
 import { PersonalanalyseComponent } from './personalanalyse/personalanalyse.component';
 import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.component';
 import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component';
-import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component'
+import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component';
+import { RsaComponent } from './analyse_security_engineer/rsa/rsa.component'
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AuhtenticationComponent } from './analyse_security_engineer/auhtenticat
     PersonalanalyseComponent,
     LeerplanresearchComponent,
     Leerontwikkelingpt1Component,
-    AuhtenticationComponent
+    AuhtenticationComponent,
+    RsaComponent
   ],
   imports: [
     BrowserModule,
