@@ -21,6 +21,7 @@ import { PersonalresearchComponent } from './personalresearch/personalresearch.c
 import { PersonalanalyseComponent } from './personalanalyse/personalanalyse.component';
 import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.component';
 import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component';
+import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: '/main', pathMatch: 'full'},
@@ -45,7 +46,8 @@ const routes: Routes = [
   {path: 'personalresearch', component : PersonalresearchComponent},
   {path: 'personalanalyse', component : PersonalanalyseComponent},
   {path: 'personalleerplanning', component : LeerplanresearchComponent},
-  {path: 'ontwikkeling1', component : Leerontwikkelingpt1Component}
+  {path: 'ontwikkeling1', component : Leerontwikkelingpt1Component},
+  {path: 'authorisatie', component : AuhtenticationComponent}
 
   
 ];

@@ -22,7 +22,8 @@ import { RedvsblueComponent } from './analyse_security_engineer/redvsblue/redvsb
 import { PersonalresearchComponent } from './personalresearch/personalresearch.component';
 import { PersonalanalyseComponent } from './personalanalyse/personalanalyse.component';
 import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.component';
-import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component'
+import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component';
+import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component'
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leeron
     PersonalresearchComponent,
     PersonalanalyseComponent,
     LeerplanresearchComponent,
-    Leerontwikkelingpt1Component
+    Leerontwikkelingpt1Component,
+    AuhtenticationComponent
   ],
   imports: [
     BrowserModule,

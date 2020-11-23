@@ -1,0 +1,23 @@
+<div class="content"> 
+<h2>Authentication/Authorization</h2>
+<p>Dit hoofdstuk bestaat uit drie dingen: Gebruiker creatie, JWT tokens en springboot authorizatie</p>
+<p><b>Gebruiker Creatie  </b></p>
+<p>Een gebruiker kan worden gemaakt doormiddel van het versturen van een POST request naar /auth/user met de parameters username, email, password. Als een gebruikersnaam of email al wordt gebruikt 
+wordt er een error teruggestuurd. Het versturen van de POST request zal een JWT TOken terugsturen. Dit zal in de front-end worden opgeslagen en gebruikt.
+</p>
+
+<p><b>JWT tokens</b></p>
+<p>Een JWT-token heeft drie gegevensvelden, allemaal versleuteld met Base64: header, payload en verificatiehandtekening. 
+    In de koptekst zet je normaal gesproken het algoritme, in dit geval RSA. Voor de payload krijg je een 'sub' die het onderwerp is. 
+    In mijn applicatie bewaar ik daar de userID, username en ROLE en EXP. De ROLE is dat van een gebruiker en EXP staat voor de vervaldatum van het token. 
+    Voor de verificatie wordt een encryptie gebruikt. Ik gebruik RSA2048 als encryptie en deze sleutel wordt willekeurig gegenereerd. 
+    Dit betekent dat als iemand de payload probeert te wijzigen, de handtekening niet meer geldig is</p>
+
+    <img src="../../assets/img/rsatoken.PNG">
+
+    <p><b>Authorizatie</b></p>
+    <p>Wanneer een request naar de api wordt verstuurd gaat het door een serie van checks om te kijken of de request de goede authorizatie heeft.
+        Er wordt dan gekeken of de verstuurder de goede Role heeft en of de verstuurder die request überhaupt mag maken. Als het antwoord ja is wordt het request doorgestuurd en als het antwoord nee is wordt er een http error 401 gegeven
+    </p>
+    <img src="../../assets/img/authorisatie.PNG">
+</div>
