@@ -48,7 +48,7 @@ const routes: Routes = [
   {path: 'personalanalyse', component : PersonalanalyseComponent},
   {path: 'personalleerplanning', component : LeerplanresearchComponent},
   {path: 'ontwikkeling1', component : Leerontwikkelingpt1Component},
-  {path: 'authorisatie', component : AuhtenticationComponent},
+  {path: 'implementatie', component : AuhtenticationComponent},
   {path: 'rsa', component : RsaComponent}
 
   

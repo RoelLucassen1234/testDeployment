@@ -20,4 +20,35 @@ wordt er een error teruggestuurd. Het versturen van de POST request zal een JWT 
         Er wordt dan gekeken of de verstuurder de goede Role heeft en of de verstuurder die request überhaupt mag maken. Als het antwoord ja is wordt het request doorgestuurd en als het antwoord nee is wordt er een http error 401 gegeven
     </p>
     <img src="../../assets/img/authorisatie.PNG">
+
+    <h2>Logging</h2>
+    <p>Ik heb logging tot nu toe geimplimenteerd in mijn project. De reden hiervoor is om ervoor te zorgen dat het snel mogelijk is om te zien als er iets vreemds gebeurd of om een process goed na te kunnen kijken. Ik gebruik hiervoor org.slf4j. De reden waarom ik deze logging service heb gebruikt kun je zien bij het document “onderzoek naar logging”. Ik zal nu een paar verschillende voorbeelden laten zien van logging die worden toegepast in mijn project. Ga ervanuit dat er meer logging wordt toegepast dan alleen de voorbeelden.</p>
+    <p>logger.warn wordt gebruikt als er iets ongebruikelijks gebeurd. <br>
+        logger.info wordt gebruikt om te informeren dat er iets gaat gebeuren, is gebeurd of aan de gang is. <br>
+        logger.error wordt gebruikt als er een ernstige error wordt aangegeven.
+        </p>
+    <p>Eerste voorbeeld is van de authenticatie methode:
+    </p>
+    <img src="../../../assets/img/log1.PNG">
+    <p>Tweede voorbeeld is de validateAuthenticatie() die checkt of de request überhaupt mogelijk is.
+    </p>
+    <img src="../../../assets/img/log2.PNG">
+    <p>Laatste voorbeeld is de validateField() methode</p>
+    <img src="../../../assets/img/Log3.PNG">
+
+<h2>Regular Expression </h2>
+<p> Ik heb op elk input-veld validatie dat te maken heeft met username en email door middel van regular expressions. Alle input wordt met het patroon van de regular expression vergeleken. Als dit echter niet overeenkomt krijgt de gebruiker te zien wat er niet klopt. Daarnaast kan er dan ook geen request doorgestuurd worden totdat de input valide is. Als de ingevoerde tekst in het invoerveld niet overeenkomt met dat patroon, wordt deze als invalide gezien. Bij het uitvoeren van het request zal hierop een check gedaan worden en de gebruiker hierover een melding krijgen. Zo'n patroon kan er als volgt uitzien:</p>
+<img src="../../../assets/img/regex1.PNG">
+<p>Deze regex is best simpel. Het laat alleen input toe dat grote of kleine letters zijn, de nummers 0 tot en met 9, de - en de _. Is dit niet het geval zal het een error geven.</p>
+<img src="../../../assets/img/regex2.PNG">
+<p>Deze regex is bedoelt voor het email adress. Het eerste gedeelte: [a-zA-Z0-9.!_-] laat alle cijfers, getallen en . - _ toe. Daana komt het tweede gedeelte de +@. Deze dwingt af dat na het eerste gedeelte er een @ voorkomt. 
+    Dan heb je het derde gedeelte [a-zA-Z0-9-]. Deze is gemaakt zodat je bijvoorbeeld hotmail of live kan schrijven. Dan komt het vierde gedeelte (?:\. Deze dwingt een . af. Het vijfde gedeelte [a-zA-Z0-9-] vraagt voor bijvoorbeeld een .nl</p>
+    <p>In kort: <br>
+    Eerste gedeelt: RoelLucassen <br>
+Tweede gedeelte: @ <br>
+Derde gedeelte: hotmail <br>
+Vierde Gedeelte: . <br>
+Vijfde Gedeelte: nl <br>
+Allemaal samengevoegd: RoelLucassen@hotmail.com</p>
+
 </div>

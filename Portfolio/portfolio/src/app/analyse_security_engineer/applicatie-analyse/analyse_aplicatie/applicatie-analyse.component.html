@@ -1,13 +1,310 @@
 <div class="content">
-<h1>Inleiding </h1>
-<p>In dit document zullen de volgende onderwerpen worden besproken over de applicatie: 
-    •	Generale beschrijving met architectuur en user groups
-    •	Security requirements, data assets , CIAP 
+<h1>Applicatie </h1>
+<p>In dit document zal de algemene beschrijving staan rondom beveiliging.  </p>
+
+<h1>Permission</h1>
+<p>Ik heb per role gekeken wat die rol wel en niet mag doen. Elke rol mag bepaalde dingen wel en niet doen. Hieronder gelden bepaalde funtionaliteiten </p>
+<p style="margin-bottom: 0px;"><i>C = create, R = Read, U = update, D = delete, Y = yes, N = no</i></p>
+<table style="margin-top: 0px; margin-bottom: 0px;" >
+    <tr>
+        <td >
+            <p >Data asset</p>
+        </td>
+        <td >
+            <p >Visitor</p>
+        </td>
+        <td >
+            <p >Writer</p>
+        </td>
+        <td>
+            <p >Admin</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Account Information</p>
+        </td>
+        <td >
+            <p >R</p>
+        </td>
+        <td >
+            <p >CRU</p>
+        </td>
+        <td >
+            <p >CRUD</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p >Story Information</p>
+        </td>
+        <td >
+            <p >R</p>
+        </td>
+        <td >
+            <p >CRUD</p>
+        </td>
+        <td >
+            <p >RUD</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >Comment Info</p>
+        </td>
+        <td >
+            <p >R</p>
+        </td>
+        <td >
+            <p >CRU</p>
+        </td>
+        <td >
+            <p >CRUD</p>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <p ></p>
+        </td>
+        <td >
+            <p ></p>
+        </td>
+        <td >
+            <p ></p>
+        </td>
+        <td >
+            <p ></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p >Functionaliteiten</p>
+        </td>
+        <td >
+            <p ></p>
+        </td>
+        <td >
+            <p ></p>
+        </td>
+        <td >
+            <p ></p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p >Gebruiker registreren</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <tr>
+            <td> 
+                <p >Gebruiker verwijderen</p>
+            </td>
+            <td >
+                <p >N</p>
+            </td>
+            <td >
+                <p >N</p>
+            </td>
+            <td >
+                <p >Y</p>
+            </td>
+        </tr>
+    <tr>
+        <td> 
+            <p >Gebruiker bijwerken</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <p >Inloggen</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+    </tr>
+   
+    <tr>
+        <td> 
+            <p >Verhaal lezen</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <p >Verhaal aanmaken</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <p >Verhaal bijwerken</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+    </tr>
+    <tr>
+        <td> 
+            <p >Verhaal verwijderen</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+    </tr>
+  
+    <tr>
+        <td> 
+            <p >Administrator aanmaken</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >N</p>
+        </td>
+        <td >
+            <p >Y</p>
+        </td>
+    </tr>
+</table>
+<br>
+
+<p style="margin-top: 0px;"><b>Visitor </b> <br> 
+Account information <br>
+Een visitor heeft zelf geen account informatie. Het is wel mogelijk om andere profielen te bekijken. Dan krijgt hij informatie te zien zoals hoeveel verhalen het profiel heeft geschreven of hoeveel comments deze heeft.
+
+<br><br>
+Story information <br>
+Een visitor kan alleen verhalen bekijken. Verder kan hij niks anders doen. 
+<br>
+<br>
+
+Comment Info <br>
+Een visitor kan alleen comments van andere lezen. Hij kan verder er niks mee doen.
+<br>
+<br>
+Functionaliteiten <br>
+ Een visitor kan een normale gebruiker aanmaken. Hierdoor zal hij toegang krijgen tot meer functionaliteiten. <br>
+ Een visitor kan niks van een gebruiker aanpassen. Dit komt omdat de visitor geen account heeft. <br>
+ Een visitor kan geen account verwijderen aangezien hij daar niet de permissies voor heeft. <br>
+ Een visitor kan inloggen op een account. <br>
+ Een visitor kan een verhaal doorlezen om te kijken uit interesse. <br>
+ Een visitor kan niks van een verhaal aanpassen aangezien een visitor geen account heeft met een Role. <br>
+ Een visitor kan geen verhaal verwijderen.<br>
+ Een visitor mag zelf geen verhalen schrijven omdat hij niet ingelogd is. <br>
+ <br>
+ <p style="margin-top: 0px;"><b>Writer </b> <br> 
+    Account information <br>
+    Een Writer heeft zelf  account informatie. Het is wel zijn eigen profiel of dat vane profielen te bekijken.
+     Dan krijgt hij informatie te zien zoals hoeveel verhalen het profiel heeft geschreven of hoeveel comments deze heeft. Hij kan daarnaast zijn eigen account informatie aanpassen.
+    
+    <br><br>
+    Story information <br>
+    Een writer kan verhalen bekijken, zelf aanmaken en eigen verhaal zelf ook aanpassen.
+    <br>
+    <br>
+    
+    Comment information <br>
+    Een Writer kan kan comments neerzetten, zijn eigen comments updaten en verwijderen. Daarnaast is het ook mogelijk om comments van andere te lezen.
+    <br>
+    <br>
+    Functionaliteiten <br>
+     Een writer kan geen gebruikers aanmaken. Das niet de bedoeling van de writer role.  <br>
+     Een writer kan zijn eigen account aanpassen waaronder gebruikersnaam en beschrijving. <br>
+     Een writer kan geen account verwijderen aangezien hij daar niet de permissies voor heeft. <br>
+     Een writer kan niet inloggen op een account. Hij is al ingelogd. <br>
+     Een writer kan een verhaal doorlezen om te kijken uit interesse. <br>
+     Een writer kan een verhaal aanpassen als hij het zelf heeft geschreven. Dit is om te voorkomen dat een writer andermans verhalen gaat aanpassen <br>
+     Een writer kan zijn eigen verhalen verwijderen.Dit is om te voorkomen dat een writer andermans verhalen verwijderd.<br>
+     Een writer mag zelf verhalen schrijven. Dit is de core functie van een writer <br>
+     <br>
+     <br>
+</p>
+<p style="margin-top: 0px;"><b>Admin </b> <br> 
+    Account information <br>
+    Een Admin kan een account aanmaken. Hij kan een role naar dit account toekennen: Gebruiker of Admin. Dit is om meerdere admins te kunnen maken. Ook is het mogelijk voor een admin om een account te verwijderen. Dit is om accounts te verwijderen die de regels hebben gebroken of omdat een ander Admin account niet meer wordt gebruikt.
+    Een account kan alle informatie van een account lezen. Dit is om te kijken of het account mogelijk regels overtreed. Mocht dit het geval zijn kan hij ook de account informatie aanpassen. Een admin kan echter nooit een wachtwoord of email veranderen. <br>
+    
+    <br>
+    Story information <br>
+    Wanneer het aankomt op story informatie kan een admin een verhaal lezen om te kijken of het geen regels verbreekt, mogelijk het verhaal aanpassen en als het echt moet een verhaal verwijderen. <br>  
+    <br>
+    
+    Comment Info <br>
+    Een administrator kan een comment plaatsen op een verhaal. Dit is mogelijk om feedback te geven of om te zeggen dat hij het verhaal leuk vond. Dit is vooral voor interactie. Een admin kan ook comments lezen om te kijken of ze regels verbreken. Hij kan ook zijn eigen comments aanpassen maar NIET dat van anderen. Dit is om ervoor te zorgen dat een fraudulent administrator niet nep bewijs kan creeëren.
+    Het is echter wel mogelijk voor een administrator om een comment te verwijderen dat racistisch is. 
+    <br>
+    <br>
+    Functionaliteiten <br>
+     Een administrator kan geen normale gebruikers aanmaken. Dit zou niet nodig moeten zijn aangezien iedereen een account zou moeten kunnen aanmaken. <br>
+     Een administrator kan de descriptie en naam van een andere gebruiker aanpassen mochten deze de regels verbreken. <br>
+     Een administrator kan een gebruiker verwijderen als deze meerdere keren de regels heeft verbroken of als een administrator account niet meer wordt gebruikt. <br>
+     Een administrator kan niet twee keer inloggen <br>
+     Een administrator kan een verhaal doorlezen om te kijken of er mogelijk problemen zijn. <br>
+     Een administrator kan een verhaal aanpassen mocht deze de regels verbreken. <br>
+     Een administrator kan een verhaal verwijderen als deze de regels verbreekt. <br>
+     Een administrator mag zelf geen verhalen schrijven. Het doel van een administrator is om verhalen te checken, niet om deze zelf op te schrijven. <br>
+    
+    
+    
     </p>
 
-<h1>Wat is de applicatie</h1>
-<p>De applicatie is een reader website applicatie waarin mensen hun verhalen kunnen plaatsen. Deze verhalen kunnen persoonlijk zijn tot fictie met een daarbij horende comment sectie waarin mensen hun mening kunnen geven en discussies kunnen houden. </p>
+
 <h1>Wat is het doel van de applicatie</h1>
+<p>Van elke functionaliteit heb ik bescjreven wat iemand kan doen om om mijn applicatie te misbruiken.
+    Ik heb hiervoor oplossingen beschreven in de rechthoeken. De kraaien poten wil zeggen dat alles wat hiermee te maken heeft wordt meegenomen in het ontwerp</p>
+<img src="../../../../assets/img/misuse.PNG">
 <p>Het doel is om een veilige applicatie te maken die aan de beveiliging voldoet en daarnaast een openbare omgeving geeft om je mening etc te geven. Ook zal deze applicatie worden gebruikt voor red en blue teamers om hun vaardigheden te testen. </p>
 <h1>User groups</h1>
 <p>Hieronder zullen alle user groups staan. Het is mogelijk dat deze over tijd veranderen.</p>
@@ -16,9 +313,9 @@
         <th>Usergroups</th>
         <th>Red Teamers</th>
         <th>Blue Teamers</th>
-        <th>Lezers</th>
-        <th>Schrijvers</th>
-        <th>Administratie</th>
+        <th>Visitor</th>
+        <th>Writer</th>
+        <th>Admin</th>
       </tr>
       <tr>
         <td>beschrijving</td>
@@ -30,146 +327,315 @@
       </tr>
 </table>
 
-<h1>Architectuur</h1>
-<p>In dit kopje zal alle architectuur staan van het project. Het is mogelijk dat sommige architectuur mist omdat het nog niet is toegevoegd of gemaakt.</p>
-<h1>Systeem Context</h1>
-<img style="width: 40pc;" class="project_icon" src="../../../assets/img/simple_architectuur.PNG" alt="simpele architectuur">
-<p>Aangezien de applicatie een website is heeft een gebruiker alleen toegang tot de front-end. Vanuit de front-end kan hij bepaalde requests maken naar de backend/API. De API zal verifiëren dat de gebruiker de juiste privileges heeft en zal gebasseerd hierop een request maken naar een kleine database. Hiernaast zal hij alle transacties loggen. De database zal opnieuw verifiëren of de API request de juiste privileges heeft en zal gebasseerd hierop de request uitvoeren of niet.</p>
-
-<h1>Netwerk architectuur</h1>
-<img  class="project_icon" src="../../../assets/img/netwerk.PNG" alt="simpele architectuur"> 
-<p>Mijn netwerk architectuur zal er als volgt:
-    - Firewall 1.0. Deze firewall restrict alle inbound en outbound communicatie. Een voorbeeld zou zijn om alleen port 80 en 443 verkeer open te zetten voor http en https servers.
-    - IDS. Dit is een intrusion detection server die alle kritische subnets bekijkt en de LAN. Dit helpt met het vinden van een afwijkende netwerk process dat mogelijk een aanval kan zijn.
-    -  Webserver. Hierbinnen wordt de website gehost.
-    - Application Server. Hier worden alle transacties van de webserver gelogged en geverifierd. Als de requests zijn goedgekeurd kan het zijn dat de application server een request naar de database stuurt
-    - Firewall 2.0. Sluit alles behalve de ipadressen waar servers op staan gehost zoals de database.
-    - Database. De database zal requests van de Applicatie Server binnenkrijgen, verifiëren en dan data terugsturen naar de application server
-    </p>
-
-    <h1>Security Requirement</h1>
-<p>De security is belangrijk in deze applicatie omdat er gebruik wordt gemaakt van emails en wachtwoorden. Dit is gevoelige informatie dat niet iedereen zomaar mag weten. Daarnaast is security ook belangrijk om ervoor te zorgen dat vreemde niet zomaar verhalen van andere kunnen aanpassen en die schrijvers een slechte reputatie geven. Dezelfde regel geld ook voor de reacties/comments van andere en/of het verwijderen ervan.
-    Hetgene waar eerst op wordt gefocused is het authorizeren en authorisiatie. Een lezer heeft minder rechten dan een schrijver terwijl een schrijver minder rechten heeft dan een administrator. Daarnaast zal ook moeten worden gekeken hoe iemand zichzelf kan authentiseren. Dit kan doormiddel van two-factor authenticatie maar daar moet nog naar worden gekeken.
-    Het tweede deel waar de applicatie zich op zal focussen is het tegengaan van XSS en brute-forcen van accounts. Het brute-forcen van accounts zal moeten worden gedaan door een time-out of captcha. Voor het probleem van de XSS zal nog onderzoek naar moeten worden gedaan.
-    </p>
-
-    <h1>Data list</h1>
-    
-<table >
-        <tr>
-            <td >
-                <p >Data asset</p>
-            </td>
-            <td >
-                <p >Visitor</p>
-            </td>
-            <td >
-                <p >Writer</p>
-            </td>
-            <td>
-                <p >Admin</p>
-            </td>
-        </tr>
-        <tr>
-            <td >
-                <p >Reading</p>
-            </td>
-            <td >
-                <p >R</p>
-            </td>
-            <td >
-                <p >R</p>
-            </td>
-            <td >
-                <p >R</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p >Posting</p>
-            </td>
-            <td >
-                <p >-</p>
-            </td>
-            <td >
-                <p >C</p>
-            </td>
-            <td >
-                <p >-</p>
-            </td>
-        </tr>
-        <tr>
-            <td >
-                <p >Log in</p>
-            </td>
-            <td >
-                <p >-</p>
-            </td>
-            <td >
-                <p >R</p>
-            </td>
-            <td >
-                <p >R</p>
-            </td>
-        </tr>
-        <tr>
-            <td> 
-                <p >Story</p>
-            </td>
-            <td >
-                <p >CR</p>
-            </td>
-            <td >
-                <p >CRU</p>
-            </td>
-            <td >
-                <p >CRUD</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p >Email</p>
-            </td>
-            <td >
-                <p >C</p>
-            </td>
-            <td >
-                <p >CU</p>
-            </td>
-            <td >
-                <p >RUD</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <p >Password</p>
-            </td>
-            <td >
-                <p >C</p>
-            </td>
-            <td >
-                <p >U</p>
-            </td>
-            <td >
-                <p >RUD</p>
-            </td>
-        </tr>
-        <tr>
-            <td> 
-                <p >Username</p>
-            </td>
-            <td >
-                <p >C</p>
-            </td>
-            <td >
-                <p >RU</p>
-            </td>
-            <td >
-                <p >RUD</p>
-            </td>
-        </tr>
+<h1>Risico analyse</h1>
+<p>In dit hoofdstuk zal worden de risico's beschreven en uitgelegd. Eerst zullen de waardes worden uitgelegd die worden gebruikt.</p>
+<div style="display: flex;">
+<table style="width: 45%; margin-top: 0px; margin-bottom: 0px;" >
+    <tr>
+        <td >
+            <p >Impact level</p>
+        </td>
+        <td >
+            <p >Description</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >5. Very High</p>
+        </td>
+        <td >
+            <p >an event that has serious impact on the business and business results.</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >4. High</p>
+        </td>
+        <td >
+            <p >an event that has significant impact on the business results dropping below any minimally acceptable level.</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >3. Medium</p>
+        </td>
+        <td >
+            <p >an event that has significant impact on the business results dropping below desired level but staying above minimally acceptable level.</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >2. Low</p>
+        </td>
+        <td >
+            <p >an event that has little impact on the business and business results.</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >1. Neglictible</p>
+        </td>
+        <td >
+            <p >an event that has little impact on the business and business results..</p>
+        </td>
+    </tr>
 </table>
+<table style="width: 45%; margin-left: 10px; margin-top: 0px; margin-bottom: 0px;" >
+    <tr>
+        <td >
+            <p >Probability</p>
+        </td>
+        <td >
+            <p >Description</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >3. High</p>
+        </td>
+        <td >
+            <p >It is likely that the event occurs the coming year.</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >2. Medium</p>
+        </td>
+        <td >
+            <p >Chances are not high but possible that the event occurs the coming year.</p>
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <p >1. Low</p>
+        </td>
+        <td >
+            <p> It is unlikely that the event occurs the coming year. </p>
+        </td>
+    </tr>
+  
+</table>
+</div>
+
+<p>In het table hieronder staan de bedreigingen met de classificaties. De beredenering hiervoor zal eronder staan. De security control level wordt berekent door Impact level * Probability. Een voorbeeld zou zijn een High Impact en een Low Probability: 4 * 1 = 4. </p>
+<table class="sides-open-table">
+    <tbody>
+        <tr height="38">
+            <td height="38" width="139">
+                1. Threat
+            </td>
+            <td width="268">
+                <a name="RANGE!C3">2. impact description</a>
+            </td>
+            <td width="192">
+                <a name="RANGE!D3">3. impact level</a>
+            </td>
+            <td width="199">
+                <a name="RANGE!E3">4. probability</a>
+            </td>
+            <td class="lastTd" width="144">
+                <a name="RANGE!F3">5. level security controls</a>
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="139">
+                DDoS
+            </td>
+            <td width="268">
+                Downtime of the application
+            </td>
+            <td width="192">
+                Low
+            </td>
+            <td width="199">
+                High
+            </td>
+            <td class="lastTd" width="144">
+                6
+            </td>
+        </tr>
+        <tr height="38">
+            <td height="38" width="139">
+                Scriptkiddies, Opportunists
+            </td>
+            <td width="268">
+                Small security issues can be found
+            </td>
+            <td width="192">
+                Medium
+            </td>
+            <td width="199">
+                Medium
+            </td>
+            <td class="lastTd" width="144">
+                6
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="139">
+                Malware infection
+            </td>
+            <td width="268">
+                Incident handling costs
+            </td>
+            <td width="192">
+                High
+            </td>
+            <td width="199">
+                Medium
+            </td>
+            <td class="lastTd" width="144">
+                8
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="139">
+                Phishing
+            </td>
+            <td width="268">
+                Incident handling costs
+            </td>
+            <td width="192">
+                Medium
+            </td>
+            <td width="199">
+                Medium
+            </td>
+            <td class="lastTd" width="144">
+                6
+            </td>
+        </tr>
+        <tr height="38">
+            <td height="38" width="139">
+                Data breach personal data
+            </td>
+            <td width="268">
+                Customer, reputation damage
+            </td>
+            <td width="192">
+                High
+            </td>
+            <td width="199">
+                Medium
+            </td>
+            <td class="lastTd" width="144">
+                8
+            </td>
+        </tr>
+        <tr height="38">
+            <td height="38" width="139">
+                Stealing confidential business data
+            </td>
+            <td width="268">
+                Incident handling costs, Financial damage
+            </td>
+            <td width="192">
+                Low
+            </td>
+            <td width="199">
+                Low
+            </td>
+            <td class="lastTd" width="144">
+                2
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="139">
+                Hacktivists
+            </td>
+            <td width="268">
+                Customer damage, company image
+            </td>
+            <td width="192">
+                Medium
+            </td>
+            <td width="199">
+                Low
+            </td>
+            <td class="lastTd" width="144">
+                3
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="139">
+                State actors
+            </td>
+            <td width="268">
+                Reputation damage, Fines, Downtime
+            </td>
+            <td width="192">
+                Medium
+            </td>
+            <td width="199">
+                Low
+            </td>
+            <td class="lastTd" width="144">
+                3
+            </td>
+        </tr>
+        <tr id="lastTr" height="38">
+            <td height="38" width="139">
+                Fraudulent employee
+            </td>
+            <td>
+                Company image, Customer damage
+            </td>
+            <td width="192">
+                Medium
+            </td>
+            <td width="199">
+                Low
+            </td>
+            <td class="lastTd" width="144">
+                3
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p> <b>DDoS </b> <br>
+ Het DDos van mijn applicatie zal naar alle waarschijnlijkheid vaak kunnen gebeuren. Dit heeft echter een niet te grootte impact aangezien het alleen inhoudt dat mijn applicatie tijdelijk niet bereikbaar zou zijn. Mogelijke oplossingen om tegen DDoS te gaan is Captcha, het buitensluiten van ip-adressen dat tevaak voorkomt en een IPS.
 <br>
+<br>
+ <b>Script Kiddies </b> <br>
+    Het is mogelijk dat Script Kiddies fouten vinden in de applicatie en de impact hiervoor zal dus best groot zijn. De reden hiervoor is omdat de code dan moet worden verbeterd en dit kan tijd kosten. Mogelijke oplossingen tegen script kiddies zijn: Logging en het toepassen van alle OWASP preventie maatregelen.
+    <br>
+    <br>
+
+    <b>Malware Infection </b> <br>
+    Malware infection zou een hoge impact hebben op de applicatie. Naar alle waarschijnlijkheid zou er een back-up moeten worden gebruikt waardoor we veel informatie zouden verliezen. De kans dat dit echter zou gebeuren zou vrij klein zijn aangezien we alleen sources gebruiken en installeren die gechecked zijn.  Mogelijke oplossingen voor malware is Security awareness, Isolerende shells, Firewall, Virus Scanners gebruiken en systemen scannen om de zoveel tijd.
+    <br>
+    <br>
+
+    <b>Phishing </b> <br>
+    Phishing heeft een grote kans om te worden gebruikt maar de impact level zou vrij laag zijn. Oplossingen hiervoor zijn spamfilters en security awareness.
+    <br>
+    <br>
+    <b>Data breach personal data </b> <br>
+   De impact hiervan zou erg groot zijn. De site zou worden gezien als onveilig en veel klanten zullen dan naar alle waarschijnlijkheid vertrekken. Om dit te voorkomen is het belangrijk dat authorisatie goed wordt toegepast, dat alle data dat moet worden geencrypt goed geencrypt is en dat de database op een goede manier is beveiligd met de daarbij horende permissies.
+    <br>
+    <br>
+    <b>Stealing confidential business data </b> <br>
+    De impact hiervan zou erg laag zijn. De confidential business data zou niet al te belangrijk zijn en zal er hooguit voor zorgen dat nieuwe features worden geleaked. Om hier echter tegen te gaan is het belangrijk om alleen mensen met de clearance level toegang kunnen krijgen tot de business data en dat dit alleen gebeurd als het echt nodig is .
+     <br>
+     <br>
+
+     <b>Hacktivists </b> <br>
+     De impact hiervan zou medium zijn. Tenzij ze toegang zouden kunnen krijgen tot de database zouden ze niet veel schade kunnen toepassen. De kans dat dit echter zou gebeuren zal erg laag zijn aangezien de site geen politieke standpunten zou moeten nemen.
+      <br>
+      <br>
+      <b>State Actors </b> <br>
+      De impact hiervan zou medium zijn. Tenzij ze toegang zouden kunnen krijgen tot de database zouden ze niet veel schade kunnen toepassen. De kans dat dit echter zou gebeuren zal erg laag zijn aangezien de site niks met de regering te maken zou moeten hebben.   <br>
+       <br>
+
+       <b>Fraudulent employee </b> <br>
+       De impact hiervan zou medium zijn. Als een administrator plotseling dingen zou verwijderen zou dat voor problemen kunnen zorgen. Om deze reden zou er altijd een tweede admin zijn toestemming moeten geven voor het verwijderen of aanpassen van content. Daarnaast zouden ook alle acties moeten worden gelogd.
+        <br>
+    
+
+</p>
+
+
 
 <h1>CIA and privacy </h1>
 <table>
