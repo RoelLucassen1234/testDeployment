@@ -50,5 +50,21 @@ Derde gedeelte: hotmail <br>
 Vierde Gedeelte: . <br>
 Vijfde Gedeelte: nl <br>
 Allemaal samengevoegd: RoelLucassen@hotmail.com</p>
+<h2>Hashing</h2>
+<p> Ik heb moeten kijken hoe ik mijn wachtwoorden moest gaan hashen. Eerst had ik gekeken naar MD%. Deze library zorgt voor een simpele beveiliging van wachtwoorden. Dit is echter heel makkelijk te brute-forcen en de hashesh zijn best zwak. <br>
+    Daarna heb ik gekeken naar SHA algorithms en wukde uj deze gebruiken. Het is vrij vergelijkbaar met met MD5 behalve dat het betere hashes maakt. Daarnaast dacht ik SHA512 te gaan gebruiken totdat ik besefte dat dit nog steeds goed te brute-forcen is met een rainbow table bijvoorbeeld.<br>
+    Ik ben toen gaan zoeken naar een hash methode die hier iets tegen kan gaan doen. Ik zocht naar een hash algoritme dat brute-force langzamer maakt. <br>
+    De hash libraries die ik vond waren PBKDF2, Bcrypt en Scrypt. Deze algoritmen nemen een factor (ook bekend als beveiligingsfactor) of iteratietelling als argument. Deze waarde bepaalt hoe traag de hash-functie zal zijn. Hierdoor wordt het brute-forcen trager. <br>
+    In dit geval heb ik gekozen voor Bcrypt omdat ze alle 3 ongeveer even goed zijn maar Bcrypt heeft een hele makkelijke implementatie.
+</p>
+
+<p>Zoals in het plaatje hieronder begin ik met het creëeren van een hash doormiddel van bcrypt.gensalt(). De methode gebruikt 10 "rounds" waardoor het vaak opnieuw gehashed wordt. De complexiteit van de hash gaat expenentioneel omhoog. Dus van 10 naar 11 rounds houdt in dat in 11 rounds 2 keer zoveel increments zitten dan in 10. Hoe hoger je het echter legt hoe langer het duurt voordat de hash klaar is dus je moet kijken wat het beste is voor zowel een gebruiker als voor beveiliging.
+<br> Hierna hash ik de plaintext wachtwoord met de gensalt en dit maakt de hash. Daarna sla ik het op in de database.    
+</p>
+<img src="../../../assets/img/bcrypt_encr.PNG">
+<p>Om te kijken of een wachtwoord overeenkomt met een hash gebruik je de bcrypt.checkpw(PlainTextPassword, HashedPassword) methode. Dit is de implementatie van bcrypt.</p>
+<img src="../../../assets/img/bcrypt_val.PNG">
+
+
 
 </div>
