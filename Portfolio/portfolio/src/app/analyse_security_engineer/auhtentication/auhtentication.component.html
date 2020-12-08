@@ -65,6 +65,14 @@ Allemaal samengevoegd: RoelLucassen@hotmail.com</p>
 <p>Om te kijken of een wachtwoord overeenkomt met een hash gebruik je de bcrypt.checkpw(PlainTextPassword, HashedPassword) methode. Dit is de implementatie van bcrypt.</p>
 <img src="../../../assets/img/bcrypt_val.PNG">
 
+<h2>Database Privileges</h2>
+<p>Het is ook belangrijk om je database te beschermen. De eerste stap die ik had genomen was om ervoor te zorgen dat er meerdere accounts waren met verschillende privileges. Het eerste account heet readUser en kan alleen maar data selecteren. Mocht het wat anders doen dan wordt dat commando denied. <br>
+</p>
+<img src="../../../assets/img/database_denied.PNG">
+<p>Een ander account is de adminUser. Dit account is gemaakt voor de administrators. Dit account heeft de privileges SELECT, DELETE, UPDATE en INSERT en kan verder niks doen.</p>
+<img src="../../../assets/img/database_admin.PNG">
+
+
 
 
 </div>
