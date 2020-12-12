@@ -1,3 +1,4 @@
+<body style="background-color: #252525;" class="body">
 <div class="content"> 
 <h2>Authentication/Authorization</h2>
 <p>Dit hoofdstuk bestaat uit drie dingen: Gebruiker creatie, JWT tokens en springboot authorizatie</p>
@@ -65,14 +66,75 @@ Allemaal samengevoegd: RoelLucassen@hotmail.com</p>
 <p>Om te kijken of een wachtwoord overeenkomt met een hash gebruik je de bcrypt.checkpw(PlainTextPassword, HashedPassword) methode. Dit is de implementatie van bcrypt.</p>
 <img src="../../../assets/img/bcrypt_val.PNG">
 
+<h2> Recaptcha </h2>
+<p>(re)CAPTCHA wordt gebruikt om spam en  geautomatiseerde handelingen tegen te houden. Bij elk post request wordt een captcha token gevalideerd. Als de token is geverificeerd zal de actie worden uitgevoerd en zo niet dan zal de actie niet worden uitgevoerd.
+    Om de token te genereren heb je een sitekey nodig. Je kan een sitekey verkrijgen door het aan te vragen bij Google. Je krijgt dan een public sitekey en een private sitekey. De public staat in de front-end en de private sitekey wordt in de back-end gebruikt om te verificeren.
+
+</p>
+<br>
+<img src="../../../assets/img/recaptcha_sitekeys.PNG">
+<p>Om ReCaptchaV3 te gebruiken heb ik gebruik gemaakt van de ng-recaptcha library. Deze heeft dat goed voor angular geautomatiseerd. Het enige wat je dan hoeft te doen is op de pagina een script neer te zetten.</p>
+<img src="../../../assets/img/recaptcha script.PNG" aria-placeholder="Script">
+<p>Hierna stuur je doormiddel van de RecaptchaServiceV3.execute een token door naar de server waar de captcha zal worden geverificeerd.</p>
+<img src="../../../assets/img/recaptcha_angular.PNG" aria-placeholder="Verificatie">
+<p>In de backend heb ik een class waar de token naar de Google Api wordt verstuurd. Bij google verificeren ze de token dan en dan sturen ze een JSON terug. De JSON zier er als volgt uit:</p>
+<table id="captcha">
+    <tbody><tr>
+        <td width="250">"success": false|true</td>
+        <td>whether this request was a valid reCAPTCHA token for your site</td>
+    </tr>
+    <tr>
+        <td width="250">"score": number</td>
+        <td>the score for this request. where 0 is a bot and 1.0 is a person</td>
+    </tr>
+    <tr>
+        <td width="250">"action": string</td>
+        <td>the action name for this request (important to verify)</td>
+    </tr>
+    <tr>
+        <td width="250">"challenge_ts": timestamp</td>
+        <td>timestamp of the challenge load (ISO format yyyy-MM-dd'T'HH:mm:ssZZ)</td>
+    </tr>
+    <tr>
+        <td width="250">"hostname": string</td>
+        <td>the hostname of the site where the reCAPTCHA was solved</td>
+    </tr>
+    <tr>
+        <td width="250">"error-codes": [...]</td>
+        <td>optioneel</td>
+    </tr>
+</tbody></table>
+
+<p>Hier is een voorbeeld van een captcha JSON response:</p>
+<table id="captcha">
+    <tbody><tr>
+        <td width="250">"success"</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td width="250">"score": number</td>
+        <td>0.9</td>
+    </tr>
+    <tr>
+        <td width="250">"action": string</td>
+        <td>Login</td>
+    </tr>
+    <tr>
+        <td width="250">"challenge_ts": timestamp</td>
+        <td>2020-12-09T13:03:49Z</td>
+    </tr>
+    <tr>
+        <td width="250">"hostname": string</td>
+        <td>localhost</td>
+    </tr>
+
+</tbody></table>
+
 <h2>Database Privileges</h2>
 <p>Het is ook belangrijk om je database te beschermen. De eerste stap die ik had genomen was om ervoor te zorgen dat er meerdere accounts waren met verschillende privileges. Het eerste account heet readUser en kan alleen maar data selecteren. Mocht het wat anders doen dan wordt dat commando denied. <br>
 </p>
 <img src="../../../assets/img/database_denied.PNG">
 <p>Een ander account is de adminUser. Dit account is gemaakt voor de administrators. Dit account heeft de privileges SELECT, DELETE, UPDATE en INSERT en kan verder niks doen.</p>
 <img src="../../../assets/img/database_admin.PNG">
-
-
-
-
 </div>
+</body>
