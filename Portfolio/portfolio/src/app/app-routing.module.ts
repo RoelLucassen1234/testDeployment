@@ -23,6 +23,7 @@ import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.c
 import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component';
 import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component';
 import { RsaComponent } from './analyse_security_engineer/rsa/rsa.component';
+import { Redvsblue2Component } from './analyse_security_engineer/redvsblue2/redvsblue2.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: '/main', pathMatch: 'full'},
@@ -44,6 +45,7 @@ const routes: Routes = [
   {path: 'groupresearch', component : ProjectResearchDocumentsComponent},
   {path: 'bsnresearch', component : ResearchBsnComponent},
   {path: 'redblue1', component : RedvsblueComponent},
+  {path: 'redblue2', component : Redvsblue2Component},
   {path: 'personalresearch', component : PersonalresearchComponent},
   {path: 'personalanalyse', component : PersonalanalyseComponent},
   {path: 'personalleerplanning', component : LeerplanresearchComponent},

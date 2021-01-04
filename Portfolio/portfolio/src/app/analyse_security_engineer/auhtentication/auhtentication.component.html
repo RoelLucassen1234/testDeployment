@@ -66,6 +66,27 @@ Allemaal samengevoegd: RoelLucassen@hotmail.com</p>
 <p>Om te kijken of een wachtwoord overeenkomt met een hash gebruik je de bcrypt.checkpw(PlainTextPassword, HashedPassword) methode. Dit is de implementatie van bcrypt.</p>
 <img src="../../../assets/img/bcrypt_val.PNG">
 
+<h2>File Upload</h2>
+<p>Aangezien mijn site gebruik maakt van file upload heb ik dit geprobeerd te beveiligen. Ik heb gefocust op de volgende security aspecten hiervan: <br>
+File Size <br>
+File type <br>
+Encryptie 
+</p>
+<p>Ik heb hiervoor de volgende library gebruikt: PrimeNG. PrimeNG is een UI component library dat bepaalde componenten mooier/makkelijker maakt. In het geval van file upload
+    zorgt fileupload dat je direct kan vaststellen hoe groot een file maximaal mag zijn. Deze size wordt nog is in de backend gevalideerd.
+</p>
+<img src="../../../assets/img/maxfilesize.PNG">
+<p>PrimeNG helpt ook met het selecteren van filetypes. In dit geval laat ik alleen PNG en JPG toe. Als het een ander type is dan de gezegde file type wordt het bestand automatisch weggehaald.</p>
+
+<p>Wat ik eerst deed voor primeNG:</p>
+<img src="../../../assets/img/typecheck1.PNG">
+<p>Hoe ik het doe met PrimeNG:</p>
+<img src="../../../assets/img/typecheck2.PNG">
+<p>Hiernaast encrypt ik de files met base64. Ik doe dit om ervoor te zorgen dat het moeilijker is om bijvoorbeeld encoded images met malware door te sturen. Deze theorie is tevens correct getest nadat red teamers dezelfde mening erover hadden. Zie encryptie:</p>
+<img src="../../../assets/img/encodebase64.PNG">
+
+
+
 <h2> Recaptcha </h2>
 <p>(re)CAPTCHA wordt gebruikt om spam en  geautomatiseerde handelingen tegen te houden. Bij elk post request wordt een captcha token gevalideerd. Als de token is geverificeerd zal de actie worden uitgevoerd en zo niet dan zal de actie niet worden uitgevoerd.
     Om de token te genereren heb je een sitekey nodig. Je kan een sitekey verkrijgen door het aan te vragen bij Google. Je krijgt dan een public sitekey en een private sitekey. De public staat in de front-end en de private sitekey wordt in de back-end gebruikt om te verificeren.

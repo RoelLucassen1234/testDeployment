@@ -24,7 +24,8 @@ import { PersonalanalyseComponent } from './personalanalyse/personalanalyse.comp
 import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.component';
 import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component';
 import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component';
-import { RsaComponent } from './analyse_security_engineer/rsa/rsa.component'
+import { RsaComponent } from './analyse_security_engineer/rsa/rsa.component';
+import { Redvsblue2Component } from './analyse_security_engineer/redvsblue2/redvsblue2.component'
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { RsaComponent } from './analyse_security_engineer/rsa/rsa.component'
     LeerplanresearchComponent,
     Leerontwikkelingpt1Component,
     AuhtenticationComponent,
-    RsaComponent
+    RsaComponent,
+    Redvsblue2Component
   ],
   imports: [
     BrowserModule,

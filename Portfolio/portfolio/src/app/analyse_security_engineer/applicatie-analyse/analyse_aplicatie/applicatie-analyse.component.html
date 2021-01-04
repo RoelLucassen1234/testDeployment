@@ -596,45 +596,1153 @@ Functionaliteiten <br>
 
 <p> <b>DDoS </b> <br>
  Het DDos van mijn applicatie zal naar alle waarschijnlijkheid vaak kunnen gebeuren. Dit heeft echter een niet te grootte impact aangezien het alleen inhoudt dat mijn applicatie tijdelijk niet bereikbaar zou zijn. Mogelijke oplossingen om tegen DDoS te gaan is Captcha, het buitensluiten van ip-adressen dat tevaak voorkomt en een IPS.
-<br>
-<br>
- <b>Script Kiddies </b> <br>
-    Het is mogelijk dat Script Kiddies fouten vinden in de applicatie en de impact hiervoor zal dus best groot zijn. De reden hiervoor is omdat de code dan moet worden verbeterd en dit kan tijd kosten. Mogelijke oplossingen tegen script kiddies zijn: Logging en het toepassen van alle OWASP preventie maatregelen.
-    <br>
-    <br>
-
-    <b>Malware Infection </b> <br>
-    Malware infection zou een hoge impact hebben op de applicatie. Naar alle waarschijnlijkheid zou er een back-up moeten worden gebruikt waardoor we veel informatie zouden verliezen. De kans dat dit echter zou gebeuren zou vrij klein zijn aangezien we alleen sources gebruiken en installeren die gechecked zijn.  Mogelijke oplossingen voor malware is Security awareness, Isolerende shells, Firewall, Virus Scanners gebruiken en systemen scannen om de zoveel tijd.
-    <br>
-    <br>
-
-    <b>Phishing </b> <br>
-    Phishing heeft een grote kans om te worden gebruikt maar de impact level zou vrij laag zijn. Oplossingen hiervoor zijn spamfilters en security awareness.
-    <br>
-    <br>
-    <b>Data breach personal data </b> <br>
-   De impact hiervan zou erg groot zijn. De site zou worden gezien als onveilig en veel klanten zullen dan naar alle waarschijnlijkheid vertrekken. Om dit te voorkomen is het belangrijk dat authorisatie goed wordt toegepast, dat alle data dat moet worden geencrypt goed geencrypt is en dat de database op een goede manier is beveiligd met de daarbij horende permissies.
-    <br>
-    <br>
-    <b>Stealing confidential business data </b> <br>
-    De impact hiervan zou erg laag zijn. De confidential business data zou niet al te belangrijk zijn en zal er hooguit voor zorgen dat nieuwe features worden geleaked. Om hier echter tegen te gaan is het belangrijk om alleen mensen met de clearance level toegang kunnen krijgen tot de business data en dat dit alleen gebeurd als het echt nodig is .
-     <br>
-     <br>
-
-     <b>Hacktivists </b> <br>
-     De impact hiervan zou medium zijn. Tenzij ze toegang zouden kunnen krijgen tot de database zouden ze niet veel schade kunnen toepassen. De kans dat dit echter zou gebeuren zal erg laag zijn aangezien de site geen politieke standpunten zou moeten nemen.
-      <br>
-      <br>
-      <b>State Actors </b> <br>
-      De impact hiervan zou medium zijn. Tenzij ze toegang zouden kunnen krijgen tot de database zouden ze niet veel schade kunnen toepassen. De kans dat dit echter zou gebeuren zal erg laag zijn aangezien de site niks met de regering te maken zou moeten hebben.   <br>
-       <br>
-
-       <b>Fraudulent employee </b> <br>
-       De impact hiervan zou medium zijn. Als een administrator plotseling dingen zou verwijderen zou dat voor problemen kunnen zorgen. Om deze reden zou er altijd een tweede admin zijn toestemming moeten geven voor het verwijderen of aanpassen van content. Daarnaast zouden ook alle acties moeten worden gelogd.
-        <br>
-    
 
 </p>
+<table class="sides-open-table">
+    <tbody>
+        <tr height="20">
+            <td style="border: none;" height="20" width="192">
+            </td>
+            <td style="border: none;" colspan="5" width="759">
+            </td>
+        </tr>
+        <tr height="21">
+            <td style="border-bottom: none;" height="21" width="192">
+            </td>
+            <td rowspan="2" width="175">
+                Preventive
+            </td>
+            <td colspan="2" rowspan="2" width="200">
+                Detective
+            </td>
+            <td rowspan="2" width="193">
+                Repressive
+            </td>
+            <td rowspan="2" width="191">
+                Corrective
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Human level
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+                Herstarten, legale actie ondernemen
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Organisation Level
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Application Level
+            </td>
+            <td>
+                Teveel requests blokkeren
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+                CAPTCHA
+            </td>
+            <td width="191">
+                Bron zoeken, Bron buitensluiten
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                System Level
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+                Logging
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+        <tr height="42">
+            <td height="42" width="192">
+                Network Level
+            </td>
+            <td>
+                Teveel requests blokkeren
+            </td>
+            <td colspan="2" width="200">
+                Detection with IPS
+            </td>
+            <td width="193">
+                Blocking when having to many requests
+            </td>
+            <td width="191">
+                Buitensluiten ip adres
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Buildings and grounds
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+ <b>Script Kiddies </b> <br>
+    Het is mogelijk dat Script Kiddies fouten vinden in de applicatie en de impact hiervoor zal dus best groot zijn. De reden hiervoor is omdat de code dan moet worden verbeterd en dit kan tijd kosten. Mogelijke oplossingen tegen script kiddies zijn: Logging en het toepassen van alle OWASP preventie maatregelen.
+ 
+</p>
+<table class="sides-open-table">
+    <tbody>
+        <tr height="20">
+            <td style="border: none;" height="20" width="192">
+            </td>
+            <td style="border: none;" colspan="5" width="759">
+            </td>
+        </tr>
+        <tr height="21">
+            <td style="border-bottom: none;" height="21" width="192">
+            </td>
+            <td rowspan="2" width="175">
+                Preventive
+            </td>
+            <td colspan="2" rowspan="2" width="200">
+                Detective
+            </td>
+            <td rowspan="2" width="193">
+                Repressive
+            </td>
+            <td rowspan="2" width="191">
+                Corrective
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Human level
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+                Blue-team	
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+                bron vinden en mogelijk legale actie ondernemen     </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Organisation Level
+            </td>
+            <td width="175">
+                Responsible disclosure
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Application Level
+            </td>
+            <td>
+                Owasp top 10 preventie maatregelen
+            </td>
+            <td colspan="2" width="200">
+                Logging	
+            </td>
+            <td width="193">
+                
+            </td>
+            <td width="191">
+                Account/bron buitensluiten
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                System Level
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+                Logging
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+        <tr height="42">
+            <td height="42" width="192">
+                Network Level
+            </td>
+            <td>
+                IPS
+            </td>
+            <td colspan="2" width="200">
+               IDS
+            </td>
+            <td width="193">
+               
+            </td>
+            <td width="191">
+                Buitensluiten ip adres
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Buildings and grounds
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <b>Malware Infection </b> <br>
+    Malware infection zou een hoge impact hebben op de applicatie. Naar alle waarschijnlijkheid zou er een back-up moeten worden gebruikt waardoor we veel informatie zouden verliezen. De kans dat dit echter zou gebeuren zou vrij klein zijn aangezien we alleen sources gebruiken en installeren die gechecked zijn.  Mogelijke oplossingen voor malware is Security awareness, Isolerende shells, Firewall, Virus Scanners gebruiken en systemen scannen om de zoveel tijd.
+
+</p>
+
+<table class="sides-open-table">
+    <tbody>
+        <tr height="20">
+            <td style="border: none;" height="20" width="192">
+            </td>
+            <td style="border: none;" colspan="5" width="759">
+            </td>
+        </tr>
+        <tr height="21">
+            <td style="border-bottom: none;" height="21" width="192">
+            </td>
+            <td rowspan="2" width="175">
+                Preventive
+            </td>
+            <td colspan="2" rowspan="2" width="200">
+                Detective
+            </td>
+            <td rowspan="2" width="193">
+                Repressive
+            </td>
+            <td rowspan="2" width="191">
+                Corrective
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Human level
+            </td>
+            <td width="175">
+                Security Awareness
+            </td>
+            <td colspan="2" width="200">
+                Blue-team	
+            </td>
+            <td width="193">
+                Geïnfecteerde systemen isoleren 
+            </td>
+            <td width="191">
+                Fixen van systeem of vervangen        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Organisation Level
+            </td>
+            <td width="175">
+               
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+                Onderzoeken hoe het is gebeurd
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Application Level
+            </td>
+            <td>
+                Isolerende shells
+            </td>
+            <td colspan="2" width="200">
+               
+            </td>
+            <td width="193">
+                
+            </td>
+            <td width="191">
+                
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                System Level
+            </td>
+            <td width="175">
+                Virus scanner
+            </td>
+            <td colspan="2" width="200">
+                Virus scanner
+            </td>
+            <td width="193">
+                Bestand in Quarantaine plaatsen
+            </td>
+            <td width="191">
+                Systeemscan
+            </td>
+        </tr>
+        <tr height="42">
+            <td height="42" width="192">
+                Network Level
+            </td>
+            <td>
+                Firewall
+            </td>
+            <td colspan="2" width="200">
+               IDS
+            </td>
+            <td width="193">
+               
+            </td>
+            <td width="191">
+                Alle systemen scannen
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Buildings and grounds
+            </td>
+            <td width="175">
+                Computers locken, Systemen achter gesloten deur
+            </td>
+            <td colspan="2" width="200">
+                Camera's en alarmen	
+            </td>
+            <td width="193">
+                Politie bellen
+            </td>
+            <td width="191">
+                Beveiliging verbeteren
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <b>Phishing </b> <br>
+    Phishing heeft een grote kans om te worden gebruikt maar de impact level zou vrij laag zijn. Oplossingen hiervoor zijn spamfilters en security awareness.
+
+</p>
+<table class="sides-open-table">
+    <tbody>
+        <tr height="20">
+            <td style="border: none;" height="20" width="192">
+            </td>
+            <td style="border: none;" colspan="5" width="759">
+            </td>
+        </tr>
+        <tr height="21">
+            <td style="border-bottom: none;" height="21" width="192">
+            </td>
+            <td rowspan="2" width="175">
+                Preventive
+            </td>
+            <td colspan="2" rowspan="2" width="200">
+                Detective
+            </td>
+            <td rowspan="2" width="193">
+                Repressive
+            </td>
+            <td rowspan="2" width="191">
+                Corrective
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Human level
+            </td>
+            <td width="175">
+                Security Awareness
+            </td>
+            <td colspan="2" width="200">
+                Blue-team	
+            </td>
+            <td width="193">
+                Security waarschuwing
+            </td>
+            <td width="191">
+              </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Organisation Level
+            </td>
+            <td width="175">
+                Dubbel checken
+            </td>
+            <td colspan="2" width="200">
+                Dubbel checken
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Application Level
+            </td>
+            <td>
+            </td>
+            <td colspan="2" width="200">
+               </td>
+            <td width="193">
+                
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                System Level
+            </td>
+            <td width="175">
+                spamfilters
+            </td>
+            <td colspan="2" width="200">
+               
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+                spamfilters
+            </td>
+        </tr>
+        <tr height="42">
+            <td height="42" width="192">
+                Network Level
+            </td>
+            <td>
+                
+            </td>
+            <td colspan="2" width="200">
+              
+            </td>
+            <td width="193">
+                Gelekte accounts verwijderen  
+            </td>
+            <td width="191">
+                
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Buildings and grounds
+            </td>
+            <td width="175">
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <b>Data breach personal data </b> <br>
+   De impact hiervan zou erg groot zijn. De site zou worden gezien als onveilig en veel klanten zullen dan naar alle waarschijnlijkheid vertrekken. Om dit te voorkomen is het belangrijk dat authorisatie goed wordt toegepast, dat alle data dat moet worden geencrypt goed geencrypt is en dat de database op een goede manier is beveiligd met de daarbij horende permissies.
+
+</p>
+<table class="sides-open-table">
+    <tbody>
+        <tr height="20">
+            <td style="border: none;" height="20" width="192">
+            </td>
+            <td style="border: none;" colspan="5" width="759">
+            </td>
+        </tr>
+        <tr height="21">
+            <td style="border-bottom: none;" height="21" width="192">
+            </td>
+            <td rowspan="2" width="175">
+                Preventive
+            </td>
+            <td colspan="2" rowspan="2" width="200">
+                Detective
+            </td>
+            <td rowspan="2" width="193">
+                Repressive
+            </td>
+            <td rowspan="2" width="191">
+                Corrective
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Human level
+            </td>
+            <td width="175">
+              
+            </td>
+            <td colspan="2" width="200">
+                Blue-team	
+            </td>
+            <td width="193">
+                Email sturen naar alle klanten dat er een databreach is geweest   </td>
+            <td width="191">
+                     </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Organisation Level
+            </td>
+            <td width="175">
+                Niemand toegang geven tot de productie database, Responsible Disclosure/bug bounty
+            </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+                Informeren bij Data Protection Office </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Application Level
+            </td>
+            <td>
+                Goed security implementeren, OWASP top10	
+            </td>
+            <td colspan="2" width="200">
+                Elk request richting DB loggen	      </td>
+            <td width="193">
+                Applicatie (tijdelijk) zo snel mogelijk offline halen  
+            </td>
+            <td width="191">
+                Applicatieproblemen fixen  
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                System Level
+            </td>
+            <td width="175">
+                Data encrypted opslaan via een up-to-date encryptie
+            </td>
+            <td colspan="2" width="200">
+                
+            </td>
+            <td width="193">
+            </td>
+            <td width="191">
+                </td>
+        </tr>
+        <tr height="42">
+            <td height="42" width="192">
+                Network Level
+            </td>
+            <td>
+                CORS policy
+            </td>
+            <td colspan="2" width="200">
+               IDS
+            </td>
+            <td width="193">
+               
+            </td>
+            <td width="191">
+              
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Buildings and grounds
+            </td>
+            <td width="175">
+                Server rooms opslot
+            </td>
+            <td colspan="2" width="200">
+              
+            </td>
+            <td width="193">
+                
+            </td>
+            <td width="191">
+               
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>   
+<b>Stealing confidential business data </b> <br>
+    De impact hiervan zou erg laag zijn. De confidential business data zou niet al te belangrijk zijn en zal er hooguit voor zorgen dat nieuwe features worden geleaked. Om hier echter tegen te gaan is het belangrijk om alleen mensen met de clearance level toegang kunnen krijgen tot de business data en dat dit alleen gebeurd als het echt nodig is .
+
+    </p>
+    <table class="sides-open-table">
+        <tbody>
+            <tr height="20">
+                <td style="border: none;" height="20" width="192">
+                </td>
+                <td style="border: none;" colspan="5" width="759">
+                </td>
+            </tr>
+            <tr height="21">
+                <td style="border-bottom: none;" height="21" width="192">
+                </td>
+                <td rowspan="2" width="175">
+                    Preventive
+                </td>
+                <td colspan="2" rowspan="2" width="200">
+                    Detective
+                </td>
+                <td rowspan="2" width="193">
+                    Repressive
+                </td>
+                <td rowspan="2" width="191">
+                    Corrective
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Human level
+                </td>
+                <td width="175">
+                    Security Awareness
+                </td>
+                <td colspan="2" width="200">
+                   
+                </td>
+                <td width="193">
+                    Aangifte doen  </td>
+                <td width="191">
+                         </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Organisation Level
+                </td>
+                <td width="175">
+                    Geen toegang geven tot de business data tenzij het echt nodig is    </td>
+                <td colspan="2" width="200">
+                </td>
+                <td width="193">
+                </td>
+                <td width="191">
+                    Informeren bij Data Protection Office </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Application Level
+                </td>
+                <td>
+                    Alle data encrypten wat verstuurd word over netwerken            </td>
+                <td colspan="2" width="200">
+                   	      </td>
+                <td width="193">
+                   
+                </td>
+                <td width="191">
+                  
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    System Level
+                </td>
+                <td width="175">
+                    User privileges   
+                 </td>
+                <td colspan="2" width="200">
+                    Loggen wie welke files opvraagt	  
+                </td>
+                <td width="193">
+                </td>
+                <td width="191">
+                    </td>
+            </tr>
+            <tr height="42">
+                <td height="42" width="192">
+                    Network Level
+                </td>
+                <td>
+                    Computers locken, Systemen achter gesloten deur. Documenten in een kluis stoppen.
+                </td>
+                <td colspan="2" width="200">
+                    Camera's en alarmen	
+                </td>
+                <td width="193">
+                    Politie bellen
+                </td>
+                <td width="191">
+                    Beveiliging verbeteren
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Buildings and grounds
+                </td>
+                <td width="175">
+                    Server rooms opslot
+                </td>
+                <td colspan="2" width="200">
+                  
+                </td>
+                <td width="193">
+                    
+                </td>
+                <td width="191">
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+    <b>Hacktivists </b> <br>
+     De impact hiervan zou medium zijn. Tenzij ze toegang zouden kunnen krijgen tot de database zouden ze niet veel schade kunnen toepassen. De kans dat dit echter zou gebeuren zal erg laag zijn aangezien de site geen politieke standpunten zou moeten nemen.
+    </p>
+    <table class="sides-open-table">
+        <tbody>
+            <tr height="20">
+                <td style="border: none;" height="20" width="192">
+                </td>
+                <td style="border: none;" colspan="5" width="759">
+                </td>
+            </tr>
+            <tr height="21">
+                <td style="border-bottom: none;" height="21" width="192">
+                </td>
+                <td rowspan="2" width="175">
+                    Preventive
+                </td>
+                <td colspan="2" rowspan="2" width="200">
+                    Detective
+                </td>
+                <td rowspan="2" width="193">
+                    Repressive
+                </td>
+                <td rowspan="2" width="191">
+                    Corrective
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Human level
+                </td>
+                <td width="175">
+                    
+                </td>
+                <td colspan="2" width="200">
+                   Blue team
+                </td>
+                <td width="193">
+                   
+                </td>
+                <td width="191">
+                
+                </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Organisation Level
+                </td>
+                <td width="175">
+                   
+                  </td>
+                <td colspan="2" width="200">
+                </td>
+                <td width="193">
+                </td>
+                <td width="191">
+                    Sancties of aangifte tegen aanvallende land, Informeren bij Data Protection Office
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Application Level
+                </td>
+                <td>
+                    Security implementeren, Vulnerability scans met tools, Authenticatie nodig voor DB interactie    <td colspan="2" width="200">
+                </td>
+                <td width="193">
+                   
+                </td>
+                <td width="191">
+                    Bug fixes toevoegen in het ontwikkelproces met hoge prioriteit
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    System Level
+                </td>
+                <td width="175">
+                    standaard security maatregelen nemen  
+                 </td>
+                <td colspan="2" width="200">
+                    API request monitoring (als van toepassing)	
+                </td>
+                <td width="193">
+                </td>
+                <td width="191">
+                    </td>
+            </tr>
+            <tr height="42">
+                <td height="42" width="192">
+                    Network Level
+                </td>
+                <td>
+                    standaard security maatregelen nemen
+                             </td>
+                <td colspan="2" width="200">
+                   IDS
+                </td>
+                <td width="193">
+                    IPS
+                </td>
+                <td width="191">
+                    
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Buildings and grounds
+                </td>
+                <td width="175">
+                    Computers locken, Systemen achter gesloten deur
+                </td>
+                <td colspan="2" width="200">
+                    Camera's en alarmen	
+                </td>
+                <td width="193">
+                    Politie bellen 
+                </td>
+                <td width="191">
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>  
+    <b>State Actors </b> <br>
+      De impact hiervan zou medium zijn. Tenzij ze toegang zouden kunnen krijgen tot de database zouden ze niet veel schade kunnen toepassen. De kans dat dit echter zou gebeuren zal erg laag zijn aangezien de site niks met de regering te maken zou moeten hebben.   <br>
+       
+    </p>
+    <table class="sides-open-table">
+        <tbody>
+            <tr height="20">
+                <td style="border: none;" height="20" width="192">
+                </td>
+                <td style="border: none;" colspan="5" width="759">
+                </td>
+            </tr>
+            <tr height="21">
+                <td style="border-bottom: none;" height="21" width="192">
+                </td>
+                <td rowspan="2" width="175">
+                    Preventive
+                </td>
+                <td colspan="2" rowspan="2" width="200">
+                    Detective
+                </td>
+                <td rowspan="2" width="193">
+                    Repressive
+                </td>
+                <td rowspan="2" width="191">
+                    Corrective
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Human level
+                </td>
+                <td width="175">
+                    Awareness
+                </td>
+                <td colspan="2" width="200">
+                   Blue team
+                </td>
+                <td width="193">
+                   
+                </td>
+                <td width="191">
+                
+                </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Organisation Level
+                </td>
+                <td width="175">
+                    Voldoen aan wetgeving
+                  </td>
+                <td colspan="2" width="200">
+                </td>
+                <td width="193">
+                </td>
+                <td width="191">
+                    Sancties of aangifte tegen aanvallende land, Informeren bij Data Protection Office
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Application Level
+                </td>
+                <td>
+                    Security implementeren, Vulnerability scans met tools, Authenticatie nodig voor DB interactie    <td colspan="2" width="200">
+                </td>
+                <td width="193">
+                   
+                </td>
+                <td width="191">
+                  
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    System Level
+                </td>
+                <td width="175">
+                    standaard security maatregelen nemen   
+                 </td>
+                <td colspan="2" width="200">
+                    
+                </td>
+                <td width="193">
+                </td>
+                <td width="191">
+                    </td>
+            </tr>
+            <tr height="42">
+                <td height="42" width="192">
+                    Network Level
+                </td>
+                <td>
+                    Beveiliging (draadloos) intern netwerk              </td>
+                <td colspan="2" width="200">
+                   
+                </td>
+                <td width="193">
+                    IPS
+                </td>
+                <td width="191">
+                    
+                </td>
+            </tr>
+            <tr height="21">
+                <td height="21" width="192">
+                    Buildings and grounds
+                </td>
+                <td width="175">
+                    Access control
+                </td>
+                <td colspan="2" width="200">
+                  
+                </td>
+                <td width="193">
+                    Politie bellen 
+                </td>
+                <td width="191">
+                   
+                </td>
+            </tr>
+        </tbody>
+    </table>
+  
+    <p>
+       <b>Fraudulent employee </b> <br>
+       De impact hiervan zou medium zijn. Als een administrator plotseling dingen zou verwijderen zou dat voor problemen kunnen zorgen. Om deze reden zou er altijd een tweede admin zijn toestemming moeten geven voor het verwijderen of aanpassen van content. Daarnaast zouden ook alle acties moeten worden gelogd.
+</p>
+<table class="sides-open-table">
+    <tbody>
+        <tr height="20">
+            <td style="border: none;" height="20" width="192">
+            </td>
+            <td style="border: none;" colspan="5" width="759">
+            </td>
+        </tr>
+        <tr height="21">
+            <td style="border-bottom: none;" height="21" width="192">
+            </td>
+            <td rowspan="2" width="175">
+                Preventive
+            </td>
+            <td colspan="2" rowspan="2" width="200">
+                Detective
+            </td>
+            <td rowspan="2" width="193">
+                Repressive
+            </td>
+            <td rowspan="2" width="191">
+                Corrective
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Human level
+            </td>
+            <td width="175">
+               
+            </td>
+            <td colspan="2" width="200">
+                Vreemd gedrag notificeren	
+            </td>
+            <td width="193">
+               
+            </td>
+            <td width="191">
+            
+            </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Organisation Level
+            </td>
+            <td width="175">
+                Achtergrond van werknemer checken, VOG
+              </td>
+            <td colspan="2" width="200">
+            </td>
+            <td width="193">
+                Werknemer isoleren
+            </td>
+            <td width="191">
+                Werknemer ontslaan
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Application Level
+            </td>
+            <td>
+                
+            <td colspan="2" width="200">
+                Logging	
+            </td>
+            <td width="193">
+               
+            </td>
+            <td width="191">
+              
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                System Level
+            </td>
+            <td width="175">
+                Restrictie accounts/privilege's  
+             </td>
+            <td colspan="2" width="200">
+                Monitoren van accounts	
+            </td>
+            <td width="193">
+                Account blokkeren
+            </td>
+            <td width="191">
+                Account verwijderen en organisatie inlichten
+                </td>
+        </tr>
+        <tr height="42">
+            <td height="42" width="192">
+                Network Level
+            </td>
+            <td>
+               
+            </td>
+            <td colspan="2" width="200">
+                Monitoren van accounts	
+            </td>
+            <td width="193">
+                Source blokkeren
+            </td>
+            <td width="191">
+                Source verwijderen en schade documenteren
+            </td>
+        </tr>
+        <tr height="21">
+            <td height="21" width="192">
+                Buildings and grounds
+            </td>
+            <td width="175">
+                Na sluitingsuren alles dicht zetten, beveiliging met persoonlijke codes
+            </td>
+            <td colspan="2" width="200">
+                Camera's en alarmen	
+            </td>
+            <td width="193">
+               
+            </td>
+            <td width="191">
+                Politie inlichten
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 
 
