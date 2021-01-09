@@ -25,7 +25,10 @@ import { LeerplanresearchComponent } from './leerplanresearch/leerplanresearch.c
 import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leerontwikkelingpt1/leerontwikkelingpt1.component';
 import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component';
 import { RsaComponent } from './analyse_security_engineer/rsa/rsa.component';
-import { Redvsblue2Component } from './analyse_security_engineer/redvsblue2/redvsblue2.component'
+import { Redvsblue2Component } from './analyse_security_engineer/redvsblue2/redvsblue2.component';
+import { RandDProjectComponent } from './rand-dproject/rand-dproject.component';
+import { RollenComponent } from './rollen/rollen.component';
+import { PeerReviewComponent } from './peer-review/peer-review.component'
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { Redvsblue2Component } from './analyse_security_engineer/redvsblue2/redv
     Leerontwikkelingpt1Component,
     AuhtenticationComponent,
     RsaComponent,
-    Redvsblue2Component
+    Redvsblue2Component,
+    RandDProjectComponent,
+    RollenComponent,
+    PeerReviewComponent
   ],
   imports: [
     BrowserModule,

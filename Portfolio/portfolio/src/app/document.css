@@ -6,7 +6,10 @@
 .content {
 }
 
-
+li
+{
+  color: #b3b3b3;;
+}
 
 .content p {
     /* margin: 12.0pt 0 0; */
@@ -47,6 +50,16 @@
     font-size: 1.5em;
     font-family: K2D, Halvetica, Arial, sans-serif;
     color: #b3b3b3;
+    font-weight: 300;
+
+}
+
+.content h3 {
+    /* margin: 12.0pt 0 0; */
+    line-height: 107%;
+    font-size: 1.1em;
+    font-family: K2D, Halvetica, Arial, sans-serif;
+    color: white;
     font-weight: 300;
 
 }

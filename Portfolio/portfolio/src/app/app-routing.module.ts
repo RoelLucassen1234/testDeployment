@@ -24,6 +24,9 @@ import { Leerontwikkelingpt1Component } from './analyse_security_engineer/leeron
 import { AuhtenticationComponent } from './analyse_security_engineer/auhtentication/auhtentication.component';
 import { RsaComponent } from './analyse_security_engineer/rsa/rsa.component';
 import { Redvsblue2Component } from './analyse_security_engineer/redvsblue2/redvsblue2.component';
+import { RandDProjectComponent } from './rand-dproject/rand-dproject.component';
+import { RollenComponent } from './rollen/rollen.component';
+import { PeerReviewComponent } from './peer-review/peer-review.component';
 
 const routes: Routes = [
   {path: '' , redirectTo: '/main', pathMatch: 'full'},
@@ -51,6 +54,9 @@ const routes: Routes = [
   {path: 'personalleerplanning', component : LeerplanresearchComponent},
   {path: 'ontwikkeling1', component : Leerontwikkelingpt1Component},
   {path: 'implementatie', component : AuhtenticationComponent},
+  {path: 'rdproject', component : RandDProjectComponent},
+  {path: 'rollen', component : RollenComponent},
+  {path: 'peerreview', component : PeerReviewComponent},
   {path: 'rsa', component : RsaComponent}
 
   
