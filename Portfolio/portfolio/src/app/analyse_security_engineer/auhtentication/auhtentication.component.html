@@ -7,6 +7,7 @@
 wordt er een error teruggestuurd. Het versturen van de POST request zal een JWT TOken terugsturen. Dit zal in de front-end worden opgeslagen en gebruikt.
 </p>
 
+<div id="jwt">
 <p><b>JWT tokens</b></p>
 <p>Een JWT-token heeft drie gegevensvelden, allemaal versleuteld met Base64: header, payload en verificatiehandtekening. 
     In de koptekst zet je normaal gesproken het algoritme, in dit geval RSA. Voor de payload krijg je een 'sub' die het onderwerp is. 
@@ -21,7 +22,8 @@ wordt er een error teruggestuurd. Het versturen van de POST request zal een JWT 
         Er wordt dan gekeken of de verstuurder de goede Role heeft en of de verstuurder die request überhaupt mag maken. Als het antwoord ja is wordt het request doorgestuurd en als het antwoord nee is wordt er een http error 401 gegeven
     </p>
     <img src="../../assets/img/authorisatie.PNG">
-
+</div>
+<div id="logging">
     <h2>Logging</h2>
     <p>Ik heb logging tot nu toe geimplimenteerd in mijn project. De reden hiervoor is om ervoor te zorgen dat het snel mogelijk is om te zien als er iets vreemds gebeurd of om een process goed na te kunnen kijken. Ik gebruik hiervoor org.slf4j. De reden waarom ik deze logging service heb gebruikt kun je zien bij het document “onderzoek naar logging”. Ik zal nu een paar verschillende voorbeelden laten zien van logging die worden toegepast in mijn project. Ga ervanuit dat er meer logging wordt toegepast dan alleen de voorbeelden.</p>
     <p>logger.warn wordt gebruikt als er iets ongebruikelijks gebeurd. <br>
@@ -36,7 +38,8 @@ wordt er een error teruggestuurd. Het versturen van de POST request zal een JWT 
     <img src="../../../assets/img/log2.PNG">
     <p>Laatste voorbeeld is de validateField() methode</p>
     <img src="../../../assets/img/Log3.PNG">
-
+</div>
+    <div id="regularExpressions">
 <h2>Regular Expression </h2>
 <p> Ik heb op elk input-veld validatie dat te maken heeft met username en email door middel van regular expressions. Alle input wordt met het patroon van de regular expression vergeleken. Als dit echter niet overeenkomt krijgt de gebruiker te zien wat er niet klopt. Daarnaast kan er dan ook geen request doorgestuurd worden totdat de input valide is. Als de ingevoerde tekst in het invoerveld niet overeenkomt met dat patroon, wordt deze als invalide gezien. Bij het uitvoeren van het request zal hierop een check gedaan worden en de gebruiker hierover een melding krijgen. Zo'n patroon kan er als volgt uitzien:</p>
 <img src="../../../assets/img/regex1.PNG">
@@ -51,7 +54,9 @@ Derde gedeelte: hotmail <br>
 Vierde Gedeelte: . <br>
 Vijfde Gedeelte: nl <br>
 Allemaal samengevoegd: RoelLucassen@hotmail.com</p>
-<h2>Hashing</h2>
+</div>
+<div id="encryptie">
+<h2>Encryptie</h2>
 <p> Ik heb moeten kijken hoe ik mijn wachtwoorden moest gaan hashen. Eerst had ik gekeken naar MD%. Deze library zorgt voor een simpele beveiliging van wachtwoorden. Dit is echter heel makkelijk te brute-forcen en de hashesh zijn best zwak. <br>
     Daarna heb ik gekeken naar SHA algorithms en wukde uj deze gebruiken. Het is vrij vergelijkbaar met met MD5 behalve dat het betere hashes maakt. Daarnaast dacht ik SHA512 te gaan gebruiken totdat ik besefte dat dit nog steeds goed te brute-forcen is met een rainbow table bijvoorbeeld.<br>
     Ik ben toen gaan zoeken naar een hash methode die hier iets tegen kan gaan doen. Ik zocht naar een hash algoritme dat brute-force langzamer maakt. <br>
@@ -65,7 +70,8 @@ Allemaal samengevoegd: RoelLucassen@hotmail.com</p>
 <img src="../../../assets/img/bcrypt_encr.PNG">
 <p>Om te kijken of een wachtwoord overeenkomt met een hash gebruik je de bcrypt.checkpw(PlainTextPassword, HashedPassword) methode. Dit is de implementatie van bcrypt.</p>
 <img src="../../../assets/img/bcrypt_val.PNG">
-
+</div>
+<div id="upload">
 <h2>File Upload</h2>
 <p>Aangezien mijn site gebruik maakt van file upload heb ik dit geprobeerd te beveiligen. Ik heb gefocust op de volgende security aspecten hiervan: <br>
 File Size <br>
@@ -84,9 +90,9 @@ Encryptie
 <img src="../../../assets/img/typecheck2.PNG">
 <p>Hiernaast encrypt ik de files met base64. Ik doe dit om ervoor te zorgen dat het moeilijker is om bijvoorbeeld encoded images met malware door te sturen. Deze theorie is tevens correct getest nadat red teamers dezelfde mening erover hadden. Zie encryptie:</p>
 <img src="../../../assets/img/encodebase64.PNG">
+</div>
 
-
-
+<div id="captcha">
 <h2> Recaptcha </h2>
 <p>(re)CAPTCHA wordt gebruikt om spam en  geautomatiseerde handelingen tegen te houden. Bij elk post request wordt een captcha token gevalideerd. Als de token is geverificeerd zal de actie worden uitgevoerd en zo niet dan zal de actie niet worden uitgevoerd.
     Om de token te genereren heb je een sitekey nodig. Je kan een sitekey verkrijgen door het aan te vragen bij Google. Je krijgt dan een public sitekey en een private sitekey. De public staat in de front-end en de private sitekey wordt in de back-end gebruikt om te verificeren.
@@ -150,7 +156,9 @@ Encryptie
     </tr>
 
 </tbody></table>
+</div>
 
+<div id="data"></div>
 <h2>Database Privileges</h2>
 <p>Het is ook belangrijk om je database te beschermen. De eerste stap die ik had genomen was om ervoor te zorgen dat er meerdere accounts waren met verschillende privileges. Het eerste account heet readUser en kan alleen maar data selecteren. Mocht het wat anders doen dan wordt dat commando denied. <br>
 </p>

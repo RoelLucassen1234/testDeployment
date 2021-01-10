@@ -54,6 +54,15 @@ li
 
 }
 
+.tableNumber{
+    width: 5%;
+    margin: 0px;
+}
+.tableNumber p{
+    width: 50px;
+    margin: 0;
+    
+}
 .content h3 {
     /* margin: 12.0pt 0 0; */
     line-height: 107%;

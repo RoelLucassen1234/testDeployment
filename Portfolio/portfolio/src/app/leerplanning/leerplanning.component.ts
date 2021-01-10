@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-leerplanning',
   templateUrl: './leerplanning.component.html',
-  styleUrls: ['./leerplanning.component.css']
+  styleUrls: ['../document.css']
 })
 export class LeerplanningComponent implements OnInit {
 
